@@ -54,7 +54,7 @@ const Projects = () => {
                     {project.name}&nbsp;
                     <span className='custom-superscript'>{project.type}</span>
                   </h5>
-                  <p className='text-md text-custom-black mb-4 pb-2 font-extralight text-opacity-50 dark:text-white'>
+                  <p className='text-md text-custom-black mb-4 pb-2 font-extralight text-opacity-50 dark:text-gray-200'>
                     {project.about}
                   </p>
                   <p className='text-custom-red mb-6 pb-2 text-sm font-extralight'>
@@ -62,7 +62,7 @@ const Projects = () => {
                   </p>
                   <div>
                     <Link
-                      className='bg-custom-red shadow-xl mt-2 inline-flex cursor-pointer items-center justify-center rounded-xl p-3 px-5 text-sm font-light leading-5 text-white transition-all duration-200 hover:animate-pulse hover:tracking-wide focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
+                      className='bg-custom-red mt-2 inline-flex cursor-pointer items-center justify-center rounded-xl p-3 px-5 text-sm font-light leading-5 text-white shadow-xl transition-all duration-200 hover:animate-pulse hover:tracking-wide focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
                       href={`/case-studies/${project.slug}`}
                     >
                       Project Details

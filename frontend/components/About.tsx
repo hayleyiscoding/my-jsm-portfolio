@@ -19,10 +19,10 @@ const About = () => {
 
       <div className='grid grid-cols-1 gap-8 px-4 sm:grid-cols-3 sm:px-0 xl:grid-cols-5'>
         {strengths.map((strength) => (
-          <div className='min-h-[150px] lg:h-[550px]' key={strength.id}>
+          <div className='min-h-[150px] lg:h-[400px]' key={strength.id}>
             <DetailsOnHover summary={strength.title} isOpen={strength.isOpen}>
               <div className='my-5 -mt-2 rounded-b-xl p-1'>
-                <p className='mb-4 text-lg font-medium text-white opacity-90'>
+                <p className='mb-4 text-sm font-medium text-white opacity-90'>
                   {strength.quote}
                 </p>
                 <hr />

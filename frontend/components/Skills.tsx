@@ -14,7 +14,9 @@ const Skills = () => {
         </div>
         <div className='flex flex-col items-center'>
           <div className='flex flex-col items-center justify-center px-4'>
-            <h4 className='text-custom-red text-center text-xl'>Frontend</h4>
+            <h4 className='text-custom-red text-center text-xl font-medium'>
+              Frontend
+            </h4>
             <ul className='flex flex-wrap items-center justify-center gap-5 py-6'>
               {technologies.slice(2, 10).map((item) => (
                 <li
@@ -35,7 +37,9 @@ const Skills = () => {
           </div>
 
           <div className='flex flex-col items-center justify-center p-4'>
-            <h4 className='text-custom-red text-center text-xl'>Backend</h4>
+            <h4 className='text-custom-red text-center text-xl font-medium'>
+              Backend
+            </h4>
             <ul className='flex flex-wrap items-center justify-center gap-5 py-6'>
               {technologies.slice(10, 14).map((item) => (
                 <li
@@ -57,7 +61,9 @@ const Skills = () => {
           </div>
 
           <div className='items center flex flex-col justify-center p-4'>
-            <h4 className='text-custom-red text-center text-xl'>Web 3</h4>
+            <h4 className='text-custom-red text-center text-xl font-medium'>
+              Web 3
+            </h4>
             <ul className='flex flex-wrap items-center justify-center gap-5 py-6'>
               {technologies.slice(14, 20).map((item) => (
                 <li
@@ -78,7 +84,7 @@ const Skills = () => {
           </div>
 
           <div className='flex flex-col items-center justify-center p-4'>
-            <h4 className='text-custom-red text-center text-xl'>
+            <h4 className='text-custom-red text-center text-xl font-medium'>
               Remote Collaboration and Testing
             </h4>
             <ul className='flex flex-wrap items-center justify-center gap-5 py-6'>

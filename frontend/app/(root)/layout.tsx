@@ -18,11 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className='dark:bg-custom-black container bg-gray-100'>
+      <body className='dark:bg-custom-black bg-gray-100'>
         <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
           <NavBar />
           <BackToTopButton />
-          <main>{children}</main>
+          <main className='container'>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

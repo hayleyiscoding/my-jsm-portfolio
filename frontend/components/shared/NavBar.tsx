@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <>
       {/* Main nav */}
-      <nav className=''>
+      <nav className='mx-8'>
         <div className='dark:custom-neumorphic-nav my-4 flex w-full items-center justify-between rounded-2xl bg-white px-4 py-2 md:px-6'>
           {/* Hamburger icon - show only on mobile */}
           <button

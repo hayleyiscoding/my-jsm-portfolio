@@ -50,13 +50,16 @@ const ContactForm = () => {
   };
 
   return (
-    <section id='contact' className='dark:bg-custom-black relative mt-6 h-auto'>
+    <section
+      id='contact'
+      className='dark:custom-neumorphic-projects relative mt-6 h-auto'
+    >
       <div className='container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        <div className='mx-auto max-w-2xl text-center mb-8'>
-          <div className='mb-8 pt-0 text-center md:mb-2 mt-6'>
+        <div className='mx-auto mb-8 max-w-2xl text-center'>
+          <div className='mb-8 mt-6 pt-0 text-center md:mb-2'>
             <SectionHeader phrase1={`Get in `} phrase2={"Touch"} phrase3='!' />
           </div>
-          <p className='lg:-mt-6 md:text-md mx-auto max-w-xl px-5 text-center text-sm font-light leading-6 dark:text-white text-custom-black text-opacity-70'>
+          <p className='md:text-md text-custom-black mx-auto max-w-xl px-5 text-center text-sm font-light leading-6 text-opacity-70 dark:text-white lg:-mt-6'>
             I&apos;d love to hear from you! If you have any questions, comments
             or feedback, please use the form below, or contact me on LinkedIn
             where I am most active. My email address is hayleyiscoding (@)
@@ -75,7 +78,7 @@ const ContactForm = () => {
                 <div>
                   <label
                     htmlFor='from_name'
-                    className='text-base font-light dark:text-white text-custom-black'
+                    className='text-custom-black text-base font-light dark:text-white'
                   >
                     Your name
                   </label>
@@ -85,7 +88,7 @@ const ContactForm = () => {
                       name='from_name'
                       id='from_name'
                       placeholder='Enter your name'
-                      className='border-b-custom-red block w-full rounded-md border-b dark:bg-black bg-white p-4 text-white caret-blue-600 transition-all duration-200 placeholder:text-gray-500 focus:border-blue-600 focus:outline-none mb-6 md:mb-0'
+                      className='border-b-custom-red mb-6 block w-full rounded-md border-b bg-white p-4 text-white caret-blue-600 transition-all duration-200 placeholder:text-gray-500 focus:border-blue-600 focus:outline-none dark:bg-black md:mb-0'
                     />
                   </div>
                 </div>
@@ -93,7 +96,7 @@ const ContactForm = () => {
                 <div>
                   <label
                     htmlFor='user-email'
-                    className='text-base font-light dark:text-white text-custom-black'
+                    className='text-custom-black text-base font-light dark:text-white'
                   >
                     Email address
                   </label>
@@ -103,15 +106,15 @@ const ContactForm = () => {
                       name='user-email'
                       id='user-email'
                       placeholder='Enter your email address'
-                      className='border-b-custom-red block w-full rounded-md border-b dark:bg-black bg-white p-4 text-white caret-blue-600 transition-all duration-200 placeholder:text-gray-500 focus:border-blue-600 focus:outline-none'
+                      className='border-b-custom-red block w-full rounded-md border-b bg-white p-4 text-white caret-blue-600 transition-all duration-200 placeholder:text-gray-500 focus:border-blue-600 focus:outline-none dark:bg-black'
                     />
                   </div>
                 </div>
 
-                <div className='sm:col-span-2 mt-5'>
+                <div className='mt-5 sm:col-span-2'>
                   <label
                     htmlFor=''
-                    className='text-base font-light dark:text-white text-custom-black'
+                    className='text-custom-black text-base font-light dark:text-white'
                   >
                     Message
                   </label>
@@ -120,7 +123,7 @@ const ContactForm = () => {
                       name='message'
                       id='message'
                       placeholder='Write your message'
-                      className='border-b-custom-red mt-[20px] block w-full resize-y rounded-md border-b dark:bg-black bg-white p-4 font-light text-white caret-blue-600 transition-all duration-200 placeholder:text-gray-500 focus:border-blue-600 focus:outline-none'
+                      className='border-b-custom-red mt-[20px] block w-full resize-y rounded-md border-b bg-white p-4 font-light text-white caret-blue-600 transition-all duration-200 placeholder:text-gray-500 focus:border-blue-600 focus:outline-none dark:bg-black'
                       rows={4}
                       maxLength={500}
                     ></textarea>
@@ -160,11 +163,11 @@ const ContactForm = () => {
                   ""
                 )}
 
-                <div className='sm:col-span-2 mb-32'>
+                <div className='mb-32 sm:col-span-2'>
                   <button
                     type='submit'
                     value='Send'
-                    className='text-md absolute mt-8 inline-flex cursor-pointer items-center justify-center rounded-md border border-white dark:bg-custom-red shadow-xl bg-custom-red px-10 py-3 font-light leading-5 text-white transition-all duration-200 hover:text-white hover:opacity-70 focus:outline-none focus:ring-2  focus:ring-black focus:ring-offset-2'
+                    className='text-md dark:bg-custom-red bg-custom-red absolute mt-8 inline-flex cursor-pointer items-center justify-center rounded-md border border-white px-10 py-3 font-light leading-5 text-white shadow-xl transition-all duration-200 hover:text-white hover:opacity-70 focus:outline-none focus:ring-2  focus:ring-black focus:ring-offset-2'
                   >
                     Send
                     <svg
