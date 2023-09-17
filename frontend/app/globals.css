@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --swiper-theme-color: #008e97 !important;
+  }
+  html {
+    font-family: FigTree;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Custom Border Radius */
+  .fancy-border-radius {
+    @apply rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%];
+  }
+  .fancy-border-radius-2 {
+    @apply rounded-[59%_41%_46%_54%_/_41%_43%_57%_59%];
+  }
+
+  /* Title Underline */
+  .skipInk {
+    text-decoration-skip-ink: all;
+  }
+
+  /* Custom Input Box */
+  input {
+    @apply text-[white] text-base font-thin tracking-[0.009375em] self-end box-border w-full transition-opacity ease-in-out dark:bg-custom-black bg-white h-16 mt-6 pt-[35px] pb-10 px-4 rounded-[4px_4px_0_0] border-b-[3px] border-b-[#008e97] border-[none] border-solid shadow-xl;
+  }
+  input:focus {
+    @apply border border-solid border-[#008e97];
+  }
+  input::placeholder {
+    @apply font-extralight text-base pt-4;
+  }
+
+  /* Custom SuperScript */
+  .custom-superscript {
+    @apply text-[0.5em] leading-[0.3em] align-baseline relative top-[-0.50em];
+  }
+
+  /* Custom Zoom */
+  .custom-zoom {
+    @apply transition-transform duration-100;
+  }
+  .custom-zoom:hover {
+    @apply scale-105;
+  }
+
+  /* Custom Neumorphic classes*/
+  .custom-neumorphic-tech {
+    @apply shadow-[inset_0.3px_0.3px_1px_#191a21,inset_-0.3px_-0.3px_1px_#191a21] rounded-[15%] bg-gradient-to-tl from-[#1f2029] to-[#131419];
+  }
+  .custom-neumorphic-table {
+    @apply shadow-[inset_6px_6px_12px_#9d9191,inset_-6px_-6px_12px_#f5e3e3] rounded-2xl bg-[#008e97];
+    background: hsl(0%, 100%, 50);
+  }
+  .custom-neumorphic-publications {
+    @apply shadow-[inset_6px_6px_12px_#9d9191,inset_-6px_-6px_12px_#f5e3e3] rounded-2xl bg-[#c9baba];
+  }
+  .custom-neumorphic-nav {
+    @apply shadow-[5px_5px_0px_#0c0c10,-5px_-5px_0px_#262832] rounded-[64px] bg-custom-black;
+  }
+  .custom-neumorphic-process {
+    border-radius: 50%;
+    background: linear-gradient(145deg, #17171e, #1b1c23);
+    box-shadow:
+      6px 6px 12px #0a0b0e,
+      -6px -6px 12px #282934;
+  }
+  .custom-neumorphic-skills {
+    border-radius: 50%;
+    background: linear-gradient(145deg, #17171e, #1b1c23);
+    box-shadow:
+      5px 5px 10px #131419,
+      -5px -5px 10px #1f2129;
+  }
+  .custom-neumorphic-projects {
+    border-radius: 10px;
+    background: linear-gradient(145deg, #17171e, #1b1c23);
+    box-shadow:
+      5px 5px 10px #131419,
+      -5px -5px 10px #1f2129;
+  }
+  .custom-neumorphic-teal {
+    border-radius: 93px;
+    background: linear-gradient(145deg, #008088, #0098a2);
+    box-shadow:
+      5px 5px 10px #006b71,
+      -5px -5px 10px #00b2bd;
+  }
+
+  .custom-neumorphic-teal-no-blur {
+    border-radius: 93px;
+    background: #008e97;
+    box-shadow:
+      5px 5px 0px #00747c,
+      -5px -5px 0px #00a8b2;
+  }
+
+  .custom-neumorphic-strengths {
+    border-radius: 24px;
+    background: linear-gradient(145deg, #1b1c23, #17171e);
+    box-shadow:
+      5px 5px 10px #0c0c10,
+      -5px -5px 10px #262832;
+  }
+
+  /* Custom Card Tilt */
+  .custom-card-tilt {
+    @apply -mt-10;
+    transform: rotateZ(25deg);
+  }
+  .custom-card-tilt2 {
+    @apply mt-[210px];
+    transform: rotateZ(35deg);
+  }
+
+  /* Custom Red Box Shadow */
+  .custom-red-box-shadow {
+    @apply shadow-[10px_10px_0px_-7px_rgba(255,0,0,0.88)];
+  }
+
+  /* Custom Box Shadow */
+  .custom-text-shadow {
+    @apply shadow-[0_0_0.8px_#008e97,0_0_1.6px_#008e97,0_0_4px_#008e97,0_0_4.8px_#008e97] p-1 pr-2  ml-2;
+  }
+
+  /* Custom Animated Active Link on Hover */
+  .highlights {
+    --s: 0.2em; /* the thickness of the line */
+    --c: #008e97; /* the color */
+    color: black;
+    padding-bottom: var(--s);
+    background:
+      linear-gradient(90deg, var(--c) 50%, #000 0) calc(100% - var(--_p, 0%)) /
+        200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.5s;
+  }
+  .highlights:hover {
+    --_p: 100%;
+  }
+  aside a {
+    --s: 0em !important;
+  }
+  /* h5 {
+    --s: 0.1em; 
+    --c: #008e97;
+
+    color: white;
+    padding-bottom: var(--s);
+    background:
+      linear-gradient(90deg, var(--c) 50%, #000 0) calc(100% - var(--_p, 0%)) /
+        200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.5s;
+  } */
+  /* h5:hover {
+    --_p: 100%;
+  } */
+}
+
+@layer components {
+  /* Testimonials - Swiper.js */
+
+  .MySwiper {
+    @apply overflow-visible!important;
+  }
+  .mySwiper .swiper-slide {
+    @apply bg-center bg-cover w-[400px] h-[400px] md:h-[500px] flex flex-col justify-center mx-[10] mb-20 !important;
+  }
+  .mySwiper .swiper-pagination-bullet {
+    @apply bg-gray-400 h-3 w-3 !important;
+  }
+  .mySwiper .swiper-pagination-bullets {
+    @apply bottom-[80px] md:bottom-[45px] !important;
+  }
+  .mySwiper .swiper-pagination-bullet-active {
+    @apply bg-custom-red !important;
+  }
+  .swiper-button-next::after .swiper-button-prev::after {
+    @apply bg-white !important;
+  }
+
+  .mySwiper .swiper-wrapper {
+    @apply h-full py-10 !important;
+  }
+}
+
+/* Contact Block */
+.contact-block {
+  background: url("/assets/geometryBlock.png") no-repeat center;
+  width: 100%;
+  border-radius: 20px !important;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+details[open] summary ~ * {
+  animation: open 0.5s ease-in-out;
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+.animate-bounce-slow {
+  animation-name: bounce-slow;
+  animation-duration: 1s; /* Adjust the duration as needed */
+  animation-iteration-count: infinite;
+}
