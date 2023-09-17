@@ -16,10 +16,10 @@ const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!form.current) return;
+    if (!form.current || !serviceId || !templateId) return;
 
     setIsLoading(true);
 
@@ -121,7 +121,7 @@ const ContactForm = () => {
                       id='message'
                       placeholder='Write your message'
                       className='border-b-custom-red mt-[20px] block w-full resize-y rounded-md border-b dark:bg-black bg-white p-4 font-light text-white caret-blue-600 transition-all duration-200 placeholder:text-gray-500 focus:border-blue-600 focus:outline-none'
-                      rows='4'
+                      rows={4}
                       maxLength={500}
                     ></textarea>
                   </div>
