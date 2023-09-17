@@ -27,7 +27,7 @@ const Navbar = () => {
           <button
             onClick={() => setShowSidebar((prevState) => !prevState)}
             type='button'
-            className='text-custom-black block items-center rounded-xl py-1 text-sm dark:text-white lg:hidden mr-2 '
+            className='text-custom-black mr-2 block items-center rounded-xl py-1 text-sm dark:text-white lg:hidden '
           >
             <span className='sr-only'>Open sidebar</span>
             {!showSidebar ? (
@@ -65,7 +65,7 @@ const Navbar = () => {
                 <Link
                   href='https://drive.google.com/file/d/1wGvI9tu7ypPXCM3HD7Q6za1B-6-SRW2g/view?usp=sharing'
                   target='_blank'
-                  className='dark:text-custom-red text-custom-black mt-[7px] flex cursor-pointer items-center justify-center rounded-xl px-3 py-1 pb-2 text-[15px] font-light leading-[4px] dark:hover:text-white hover:text-custom-red dark:font-medium'
+                  className='dark:text-custom-red text-custom-black hover:text-custom-red mt-[7px] flex cursor-pointer items-center justify-center rounded-xl px-3 py-1 pb-2 text-[15px] font-light leading-[4px] dark:font-medium dark:hover:text-white'
                 >
                   Resume
                   <AiOutlineCloudDownload size={20} className='ml-2' />

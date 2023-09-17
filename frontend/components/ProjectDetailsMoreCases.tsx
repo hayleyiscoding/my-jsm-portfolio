@@ -5,7 +5,7 @@ import { projects } from "@/constants";
 
 const ProjectDetailsMoreCases = () => {
   return (
-    <section className='mt-16 max-w-4xl border-t-2 border-t-gray-400 dark:border-t-white px-6 pb-10 pt-20'>
+    <section className='mt-16 max-w-4xl border-t-2 border-t-gray-400 px-6 pb-10 pt-20 dark:border-t-white'>
       <div className='mb-8'>
         <h5 className='text-custom-red mb-3'>Projects</h5>
         <h3 className='text-custom-black text-4xl dark:text-white'>
@@ -17,7 +17,7 @@ const ProjectDetailsMoreCases = () => {
           {projects.slice(0, 2).map((project) => (
             <li
               key={project.id}
-              className='text-md bg-white dark:custom-neumorphic-projects flex-1 p-12 font-extralight md:mb-8 rounded-xl'
+              className='text-md dark:custom-neumorphic-projects flex-1 rounded-xl bg-white p-12 font-extralight md:mb-8'
             >
               <Image
                 src={project.cardImage}

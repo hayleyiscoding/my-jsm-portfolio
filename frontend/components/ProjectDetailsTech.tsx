@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ProjectDetailsTech = ({ techStack }: { techStack: Array<string> }) => {
   return (
-    <section className='max-w-4xl w-full py-8 dark:py-6 px-10 dark:px-4 bg-white dark:bg-custom-black rounded-xl'>
+    <section className='dark:bg-custom-black w-full max-w-4xl rounded-xl bg-white px-10 py-8 dark:px-4 dark:py-6'>
       <div className=' mb-4'>
         <h5 className='text-custom-red mb-2'>Technologies used</h5>
         <h3 className='text-custom-black text-4xl dark:text-white'>

@@ -11,10 +11,10 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 }) => {
   return (
     <h2 className='text-custom-black mt-4 text-3xl font-extralight dark:text-white md:mt-4 md:text-5xl lg:mb-16'>
-      <span className='font-semibold leading-relaxed max-w-lg'>
+      <span className='max-w-lg font-semibold leading-relaxed'>
         {/* <span className='bg-custom-red absolute bottom-0.5 inline-block h-2 w-full dark:h-2'></span> */}
         {phrase1}
-        <span className='font-semibold leading-relaxed underline underline-offset-1 decoration-custom-red decoration-8 skipInk'>
+        <span className='decoration-custom-red skipInk font-semibold leading-relaxed underline decoration-8 underline-offset-1'>
           {phrase2}
         </span>
         {phrase3}
@@ -25,13 +25,3 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 };
 
 export default SectionHeader;
-
-{
-  /* <h2 className='text-custom-black mt-4 text-4xl font-extralight dark:text-white md:mt-4 md:text-5xl lg:mb-24'>
-      <span className='relative inline-block'>
-        <span className='bg-custom-red absolute bottom-0.5 inline-block h-2 w-full dark:h-2'></span>
-        <span className='relative font-semibold leading-relaxed'>{title}</span>
-      </span>
-      <br className='block sm:hidden' />
-    </h2> */
-}
