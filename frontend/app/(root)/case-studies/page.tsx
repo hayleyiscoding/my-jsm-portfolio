@@ -3,7 +3,7 @@ import Projects from "@/components/Projects";
 
 const CaseStudies = () => {
   return (
-    <main className='max-w-9xl mx-auto flex-col items-center justify-between flex'>
+    <main className='max-w-9xl mx-auto flex flex-col items-center justify-between'>
       <Projects />
       <ContactBlock />
     </main>

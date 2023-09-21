@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import "animate.css";
 
-import { socialLinks, navLinks } from "@/constants";
+import { navLinks } from "@/constants";
 import {
   AiOutlineCloseCircle,
   AiOutlineCloudDownload,
@@ -12,7 +12,6 @@ import {
 } from "react-icons/ai";
 import NavItem from "@/components/NavItem";
 import NavItemMobile from "@/components/NavItemMobile";
-import SocialLink from "@/components/SocialLink";
 import { ModeToggle } from "@/components/ModeToggle";
 
 const Navbar = () => {
@@ -75,19 +74,6 @@ const Navbar = () => {
             {/* Dark Mode Toggle */}
             <div className='md:ml-4'>
               <ModeToggle />
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Social Links - Fixed on right of screen */}
-      <nav className='align-left fixed bottom-40 right-0 z-50 rounded-l-xl border-black'>
-        <div className='px-1 py-2 lg:px-2 lg:pl-0'>
-          <div className='flex'>
-            <div className='w-7 md:w-6'>
-              {socialLinks.map((link) => (
-                <SocialLink key={link.id} icon={link.icon} href={link.url} />
-              ))}
             </div>
           </div>
         </div>

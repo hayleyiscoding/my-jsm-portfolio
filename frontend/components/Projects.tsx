@@ -1,40 +1,35 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 
-import { projects } from "@/constants";
 import SectionHeader from "./SectionHeader";
+import { getProjects } from "@/sanity/lib/client";
 
-const Projects = () => {
-  const [imageLoaded, setImageLoaded] = useState(false);
+const Projects = async () => {
+  const allProjects = await getProjects();
 
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
   return (
     <section id='projects' className='dark:bg-custom-black rounded-xl bg-white'>
       <div className='container mx-auto mb-12 pt-10 md:px-6'>
         <section className='text-center text-white'>
           <SectionHeader phrase1={`Featured `} phrase2='Projects' />
           <div className='md:text-md mt-12 grid gap-x-6 gap-y-8 p-2 pb-0 text-sm lg:grid-cols-3 lg:gap-x-12'>
-            {projects.map((project) => (
+            {allProjects.map((project) => (
               <div
-                key={project.id}
+                key={project?.name}
                 className='dark:custom-neumorphic-projects mb-1 block rounded-lg lg:mb-0'
               >
                 <div
-                  className={`blur-image ${imageLoaded ? "loaded" : ""} 
+                  className={`
                     md:custom-zoom relative m-4 overflow-hidden rounded-[10px] bg-cover bg-no-repeat`}
                 >
                   <Image
-                    onLoad={handleImageLoad}
-                    src={project.image}
-                    alt={project.name}
+                    src={`/${project?.image.asset._ref}`}
+                    alt={project?.name}
+                    width={500}
+                    height={500}
                     className='w-full rounded-t-lg text-white'
                   />
-                  <a href={`/case-studies/${project.slug}`}>
+                  <a href={`/case-studies/${project?.slug.current}`}>
                     <div className='absolute inset-0 h-full w-full overflow-hidden bg-fixed shadow-2xl transition duration-300 ease-in-out'></div>
                   </a>
                   <svg
@@ -51,19 +46,21 @@ const Projects = () => {
                 </div>
                 <div className='p-6'>
                   <h5 className='border-b-custom-red border-b-80% text-custom-black mb-3 border-b pb-3 text-xl font-bold text-opacity-70 dark:text-white'>
-                    {project.name}&nbsp;
-                    <span className='custom-superscript'>{project.type}</span>
+                    {project?.name}&nbsp;
+                    <span className='custom-superscript custom-text-shadow'>
+                      {project?.superscript}
+                    </span>
                   </h5>
                   <p className='text-md text-custom-black mb-4 pb-2 font-extralight text-opacity-50 dark:text-gray-200'>
-                    {project.about}
+                    {project?.type}
                   </p>
-                  <p className='text-custom-red mb-6 pb-2 text-sm font-extralight'>
-                    {project.tech}
-                  </p>
+                  {/* <p className='text-custom-red mb-6 pb-2 text-sm font-extralight'>
+                    {project?.tech.map((item) => `#${item} `)}
+                  </p> */}
                   <div>
                     <Link
                       className='bg-custom-red mt-2 inline-flex cursor-pointer items-center justify-center rounded-xl p-3 px-5 text-sm font-light leading-5 text-white shadow-xl transition-all duration-200 hover:animate-pulse hover:tracking-wide focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
-                      href={`/case-studies/${project.slug}`}
+                      href={`/case-studies/${project?.slug.current}`}
                     >
                       Project Details
                       <svg

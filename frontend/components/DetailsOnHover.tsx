@@ -20,10 +20,7 @@ const DetailsOnHover: React.FC<DetailsOnHoverProps> = ({
 
   return (
     <div ref={hoverRef} className='cursor-pointer rounded-xl'>
-      <details
-        open={isHover || isOpen}
-        className='bg-custom-red rounded-2xl pb-1'
-      >
+      <details open={true} className='bg-custom-red rounded-2xl pb-1'>
         <summary className='dark:custom-neumorphic-projects -ml-1 mb-4 flex flex-col items-center justify-center gap-2 rounded-2xl bg-white p-4 text-center shadow-xl'>
           <span className='text-custom-red'>
             <AiFillCheckCircle size={40} />
@@ -39,7 +36,7 @@ const DetailsOnHover: React.FC<DetailsOnHoverProps> = ({
             <AiOutlineDown size={20} />
           </span>
         </summary>
-        {(isHover || isOpen) && <div className='px-4'>{children}</div>}
+        {<div className='px-4'>{children}</div>}
       </details>
     </div>
   );

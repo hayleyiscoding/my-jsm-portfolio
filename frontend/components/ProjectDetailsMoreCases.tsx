@@ -32,7 +32,7 @@ const ProjectDetailsMoreCases = () => {
               </p>
               <Link
                 href='#'
-                className='bg-custom-red my-5 block w-full cursor-pointer rounded-3xl py-3 text-center hover:opacity-70'
+                className='bg-custom-red my-5 block w-full cursor-pointer rounded-3xl py-3 text-center text-white hover:opacity-70'
               >
                 See Case Study
               </Link>
