@@ -3,7 +3,7 @@ import Skills from "@/components/Skills";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
-import Work from "@/components/Work";
+import WorkExperience from "@/components/WorkExperience";
 import About from "@/components/About";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
-      <Work />
+      <WorkExperience />
       <Projects />
       <Testimonials />
       <ContactBlock />

@@ -20,7 +20,7 @@ const NavItemMobile: React.FC<NavItemMobileProps> = ({
       <Link
         href={url}
         onClick={closeSidebar}
-        className=' hover:text-custom-red text-custom-black mx-auto flex flex-col items-center rounded-xl pb-4 dark:text-white'
+        className='text-white mx-auto flex flex-col items-center rounded-xl pb-4 dark:text-white hover:underline'
       >
         {name}
       </Link>

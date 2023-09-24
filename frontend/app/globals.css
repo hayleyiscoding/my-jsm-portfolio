@@ -6,8 +6,9 @@
 
 @layer base {
   :root {
-    --swiper-theme-color: #008e97 !important;
+    --swiper-theme-color: transparent !important;
   }
+
   html {
     font-family: FigTree;
     scroll-behavior: smooth;
@@ -67,7 +68,6 @@
     @apply shadow-[5px_5px_0px_#0c0c10,-5px_-5px_0px_#262832] rounded-[64px] bg-custom-black;
   }
   .custom-neumorphic-process {
-    border-radius: 50%;
     background: linear-gradient(145deg, #17171e, #1b1c23);
     box-shadow:
       6px 6px 12px #0a0b0e,
@@ -88,11 +88,16 @@
       -5px -5px 10px #1f2129;
   }
   .custom-neumorphic-teal {
-    border-radius: 93px;
     background: linear-gradient(145deg, #008088, #0098a2);
     box-shadow:
       5px 5px 10px #006b71,
       -5px -5px 10px #00b2bd;
+  }
+
+  .custom-neumorphic-teal-pressed {
+    box-shadow:
+      inset 5px 5px 10px #004e53,
+      inset -5px -5px 10px #00cedb;
   }
 
   .custom-neumorphic-teal-no-blur {
@@ -109,6 +114,30 @@
     box-shadow:
       5px 5px 10px #0c0c10,
       -5px -5px 10px #262832;
+  }
+
+  .custom-neumorphic-white {
+    background: #ffffff;
+    -webkit-box-shadow:
+      6px 6px 14px #dbdbdb,
+      -6px -6px 14px #ffffff;
+    box-shadow:
+      6px 6px 14px #dbdbdb,
+      -6px -6px 14px #ffffff;
+  }
+
+  .custom-neumorphic-black-pressed {
+    background: #191a21;
+    box-shadow:
+      inset 5px 5px 10px #0d0e11,
+      inset -5px -5px 10px #252631;
+  }
+
+  .custom-neumorphic-white-pressed {
+    background: #ffffff;
+    box-shadow:
+      inset 5px 5px 10px #e3e3e3,
+      inset -5px -5px 10px #ffffff;
   }
 
   /* Custom Card Tilt */
@@ -135,7 +164,7 @@
   .highlights {
     --s: 0.2em; /* the thickness of the line */
     --c: #008e97; /* the color */
-    color: black;
+    color: white;
     padding-bottom: var(--s);
     background:
       linear-gradient(90deg, var(--c) 50%, #000 0) calc(100% - var(--_p, 0%)) /
@@ -173,25 +202,21 @@
 @layer components {
   /* Testimonials - Swiper.js */
 
-  .MySwiper {
-    @apply overflow-visible!important;
+  .mySwiper {
+    @apply mx-16 !important;
   }
   .mySwiper .swiper-slide {
-    @apply bg-center bg-cover w-[400px] h-[400px] md:h-[500px] flex flex-col justify-center mx-[10] mb-20 !important;
+    @apply shadow-2xl bg-custom-red rounded-xl bg-center bg-cover w-[400px] md:w-[500px] lg:w-[400px] h-[500px] flex flex-col justify-center mb-4 !important;
   }
   .mySwiper .swiper-pagination-bullet {
     @apply bg-gray-400 h-3 w-3 !important;
   }
   .mySwiper .swiper-pagination-bullets {
-    @apply bottom-[80px] md:bottom-[45px] !important;
+    @apply md:-bottom-[0px]  !important;
   }
   .mySwiper .swiper-pagination-bullet-active {
-    @apply bg-custom-red !important;
+    @apply dark:bg-custom-red bg-white !important;
   }
-  .swiper-button-next::after .swiper-button-prev::after {
-    @apply bg-white !important;
-  }
-
   .mySwiper .swiper-wrapper {
     @apply h-full py-10 !important;
   }

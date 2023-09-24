@@ -25,7 +25,7 @@ const ProjectDetailsHeader: React.FC<ProjectDetailsHeaderProps> = ({
   return (
     <header className='mt-8 md:mt-12'>
       <div className='px-6 text-center'>
-        <h5 className='uppercase tracking-[0.5em] font-bold text-custom-red mx-auto text-md my-2'>
+        <h5 className='uppercase tracking-[0.5em] font-bold dark:text-custom-red text-black mx-auto text-md my-2'>
           web dev project
         </h5>
         <div>
@@ -39,13 +39,13 @@ const ProjectDetailsHeader: React.FC<ProjectDetailsHeaderProps> = ({
       <Image
         src={imageProjectDetails}
         alt='Screenshot of project in the mockup of a laptop and cell phone'
-        className='object-cover max-w-[400px] md:max-w-[700px] p-6 mx-auto mt-16'
+        className='object-cover max-w-[400px] md:max-w-[700px] px-6 mx-auto mt-8'
       />
       <div className='text-center m-12'>
         <Link
           href={url}
           target='_blank'
-          className='mb-2 pb-2 cursor-pointer inline-flex items-center justify-center px-8 py-1 mt-1 text-xl font-medium leading-5 transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black dark:hover:text-white dark:text-white highlights'
+          className='mb-2 pb-2 text-white cursor-pointer inline-flex items-center justify-center px-8 py-1 mt-1 text-xl font-medium leading-5 transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black dark:hover:text-white dark:text-white dark:highlights hover:underline underline-offset-4 dark:hover:no-underline'
         >
           <div className='mr-2'>
             <BiWorld size={20} />
@@ -69,7 +69,7 @@ const ProjectDetailsHeader: React.FC<ProjectDetailsHeaderProps> = ({
         <Link
           href={github}
           target='_blank'
-          className='mb-2 pb-2 cursor-pointer inline-flex items-center justify-center px-1 py-1 mt-1 ml-0 md:ml-7 text-xl font-medium leading-5 transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black dark:hover:text-white dark:text-white text-custom-black highlights'
+          className='mb-2 pb-2 cursor-pointer inline-flex items-center justify-center px-1 py-1 mt-1 ml-0 md:ml-7 text-xl font-medium leading-5 transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black dark:hover:text-white dark:text-white dark:highlights text-white hover:underline underline-offset-4 dark:hover:no-underline'
         >
           <div className='mr-2'>
             <AiFillGithub size={20} />

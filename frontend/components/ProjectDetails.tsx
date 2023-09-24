@@ -26,6 +26,7 @@ interface ProjectDetailsProps {
   figmaDesign: string;
   challenges: Array<string>;
   learnings: Array<string>;
+  color: string;
 }
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
@@ -45,9 +46,13 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   figmaDesign,
   challenges,
   learnings,
+  color,
 }) => {
   return (
-    <main className='max-w-9xl mx-auto flex-col items-center justify-between flex'>
+    <main
+      id='projectDetails'
+      className='max-w-9xl mx-auto flex flex-col items-center justify-between'
+    >
       <ProjectDetailsHeader
         phrase1={phrase1}
         phrase2={phrase2}
@@ -63,7 +68,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
       />
       <ProjectDetailsTech techStack={techStack} />
 
-      <section className='dark:text-white text-custom-black font-extralight max-w-4xl py-5 text-opacity-80 px-4'>
+      <section className='text-white max-w-4xl px-4 py-5 font-extralight text-opacity-80 dark:text-white'>
         <hr />
         <p className='py-8'>{longDescription}</p>
         <hr />
@@ -74,14 +79,16 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         secondImage={secondImage}
       />
 
-      <section className='max-w-6xl w-full mb-12 rounded-xl'>
-        <div className='bg-blue-500 text-center text-3xl font-bold text-white py-4 px-2 mt-8 rounded-md'>
+      <section className='mb-12 w-full max-w-6xl rounded-xl'>
+        <div
+          className={`${color} mt-8 rounded-md px-2 py-4 text-center text-3xl font-bold text-white`}
+        >
           <h3>High Fidelity Figma Design</h3>
         </div>
         <Image
           src={figmaDesign}
           alt='Figma Design'
-          className='h-[400px] object-cover -mt-1 rounded-sm'
+          className='-mt-1 h-[400px] rounded-sm object-cover'
         />
       </section>
 

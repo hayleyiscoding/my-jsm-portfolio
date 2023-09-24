@@ -1,15 +1,10 @@
 "use client";
 
-import Image from "next/image";
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import required modules
 import {
   Autoplay,
   EffectCoverflow,
@@ -19,16 +14,20 @@ import {
 
 import { testimonialData } from "@/constants";
 import SectionHeader from "./SectionHeader";
+import TestimonialData from "./TestimonialData";
 
 const Testimonials = () => {
   return (
     <section
       id='testimonials'
-      className='dark:bg-custom-black container mx-auto mb-5 rounded-xl bg-white pt-10 lg:py-10'
+      className='dark:bg-custom-black bg-custom-red mx-auto mb-20 py-5 pb-10 mt-12'
     >
-      <div className='mb-5 mt-10 text-center '>
+      {/* Header */}
+      <header className='mb-5 mt-10 text-center '>
         <SectionHeader phrase2='Testimonials' />
-      </div>
+      </header>
+
+      {/* Slider */}
       <Swiper
         navigation={true}
         effect={"coverflow"}
@@ -52,28 +51,15 @@ const Testimonials = () => {
         modules={[Navigation, Autoplay, EffectCoverflow, Pagination]}
         className='mySwiper m-6'
       >
+        {/* Slider Cards */}
         {testimonialData.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className='swiper-slide rounded-xl px-10 text-center'>
-              <div className='border-custom-red mx-auto max-w-[100px] rounded-[60px] border-b-8'>
-                <Image
-                  className='grayscale-40 mx-auto mt-10 max-w-[100px] rounded-[60px] border-4 border-transparent object-cover pt-12'
-                  src={slide.avatar}
-                  alt=''
-                />
-              </div>
-              <blockquote className='mt-3 rounded-md px-4 py-6 opacity-80 sm:mt-8 md:px-0'>
-                <p className='md:text-md text-custom-black leading-6text-opacity-70 px-8 text-sm font-light dark:text-white'>
-                  {slide.testimonial}
-                </p>
-              </blockquote>
-              <p className='text-md text-custom-black mt-6 font-semibold dark:text-gray-200 sm:mt-10'>
-                {slide.name}
-              </p>
-              <p className='text-custom-red mb-10 mt-1 text-sm font-light '>
-                {slide.company}
-              </p>
-            </div>
+            <TestimonialData
+              avatar={slide.avatar}
+              testimonial={slide.testimonial}
+              name={slide.name}
+              company={slide.company}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

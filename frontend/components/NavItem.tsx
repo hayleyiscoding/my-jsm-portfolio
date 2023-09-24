@@ -15,12 +15,14 @@ const NavItem: React.FC<NavItemProps> = ({ url, name }) => {
     return path === pathname;
   };
   return (
-    <li className='py-2'>
+    <li className='py-2 text-white'>
       <Link
         href={url}
         scroll={true}
-        className={`highlights hover:text-custom-red active:text-custom-red visited:text-custom-red rounded-xl p-2 text-sm text-white dark:font-semibold dark:text-white ${
-          isActivePath(url) ? "font-semibold" : ""
+        className={`font-normal dark:highlights dark:decoration-custom-red dark:hover:no-underline hover:underline decoration-[2px] underline-offset-[4px] rounded-xl p-2 text-sm dark:text-white ${
+          isActivePath(url)
+            ? "decoration-white underline decoration-[2px] underline-offset-[4px]"
+            : ""
         }`}
       >
         {name}

@@ -21,6 +21,7 @@ const Jobit = () => {
         figmaDesign={project.figmaDesign}
         challenges={project.challenges}
         learnings={project.learnings}
+        color='bg-[#08AA7C]'
       />
     </>
   );

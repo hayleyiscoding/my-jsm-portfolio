@@ -12,11 +12,11 @@ const CopyButton: React.FC<CopyButtonProps> = ({ text }) => {
   const [isCopied, handleCopy] = useCopyToClipboard(3000);
 
   return (
-    <button onClick={() => handleCopy(text)} className='ml-2'>
+    <button onClick={() => handleCopy(text)} className='ml-2 cursor-pointer'>
       {isCopied ? (
-        <AiOutlineCheck size={20} color='#008E97' />
+        <AiOutlineCheck size={20} color='#fff' />
       ) : (
-        <AiOutlineCopy size={20} color='#008E97' />
+        <AiOutlineCopy size={20} color='#fff' />
       )}
     </button>
   );

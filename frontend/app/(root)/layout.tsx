@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className='dark:bg-custom-black bg-gray-100'>
+      <body className='dark:bg-custom-black bg-custom-red'>
         <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
           <NavBar />
           <BackToTopButton />

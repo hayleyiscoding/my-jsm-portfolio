@@ -8,15 +8,15 @@ const Projects = async () => {
   const allProjects = await getProjects();
 
   return (
-    <section id='projects' className='dark:bg-custom-black rounded-xl bg-white'>
-      <div className='container mx-auto mb-12 pt-10 md:px-6'>
+    <section id='projects' className='dark:bg-custom-black pb-10'>
+      <div className='mx-auto mb-12 pt-16 md:px-24'>
         <section className='text-center text-white'>
           <SectionHeader phrase1={`Featured `} phrase2='Projects' />
-          <div className='md:text-md mt-12 grid gap-x-6 gap-y-8 p-2 pb-0 text-sm lg:grid-cols-3 lg:gap-x-12'>
+          <div className='md:text-md mt-12 grid gap-x-6 gap-y-8 text-sm lg:grid-cols-3 lg:gap-x-12 p-8 custom-neumorphic-teal-pressed bg-custom-red '>
             {allProjects.map((project) => (
               <div
                 key={project?.name}
-                className='dark:custom-neumorphic-projects mb-1 block rounded-lg lg:mb-0'
+                className='custom-neumorphic-teal-pressed custom-neumorphic-teal mb-1 block rounded-lg dark:border-white lg:mb-0'
               >
                 <div
                   className={`
@@ -45,21 +45,18 @@ const Projects = async () => {
                   </svg>
                 </div>
                 <div className='p-6'>
-                  <h5 className='border-b-custom-red border-b-80% text-custom-black mb-3 border-b pb-3 text-xl font-bold text-opacity-70 dark:text-white'>
+                  <h5 className='border-b-white border-b-80% text-white mb-3 border-b pb-3 text-xl font-bold dark:text-white'>
                     {project?.name}&nbsp;
                     <span className='custom-superscript custom-text-shadow'>
                       {project?.superscript}
                     </span>
                   </h5>
-                  <p className='text-md text-custom-black mb-4 pb-2 font-extralight text-opacity-50 dark:text-gray-200'>
+                  <p className='text-md text-white mb-4 pb-2 font-extralight'>
                     {project?.type}
                   </p>
-                  {/* <p className='text-custom-red mb-6 pb-2 text-sm font-extralight'>
-                    {project?.tech.map((item) => `#${item} `)}
-                  </p> */}
                   <div>
                     <Link
-                      className='bg-custom-red mt-2 inline-flex cursor-pointer items-center justify-center rounded-xl p-3 px-5 text-sm font-light leading-5 text-white shadow-xl transition-all duration-200 hover:animate-pulse hover:tracking-wide focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
+                      className='custom-neumorphic-teal hover:custom-neumorphic-teal-pressed mt-2 inline-flex cursor-pointer items-center justify-center rounded-xl p-3 px-5 text-sm font-light leading-5 text-white shadow-xl transition-all duration-200 focus:ring-black'
                       href={`/case-studies/${project?.slug.current}`}
                     >
                       Project Details

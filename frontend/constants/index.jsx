@@ -14,26 +14,22 @@ import nodejs from "../public/assets/tech/nodejs.png";
 import mongodb from "../public/assets/tech/mongodb.png";
 import redux from "../public/assets/tech/redux.png";
 import hardhat from "../public/assets/tech/hardhat.png";
+import solidity from "../public/assets/tech/solidity.png";
 import thegraph from "../public/assets/tech/thegraph.png";
 import rainbowkit from "../public/assets/tech/rainbowkit.png";
 import ipfs from "../public/assets/tech/ipfs.png";
 import ethersjs from "../public/assets/tech/ethersjs.png";
-
 import automation from "../public/assets/tech/automation.png";
 import community from "../public/assets/tech/community.png";
 import email from "../public/assets/tech/email.png";
 import agile from "../public/assets/tech/agile.png";
 import jest from "../public/assets/tech/jest.png";
-import rtl from "../public/assets/tech/rtl.png";
 import writing from "../public/assets/tech/writing.png";
 import graduate from "../public/assets/tech/graduate.png";
 import teacher from "../public/assets/tech/teacher.png";
 import smm from "../public/assets/tech/smm.png";
-
 import crowdfunding from "../public/assets/projects/crowdfundingRev.png";
-import onlineCoWorkLottery from "../public/assets/projects/online-cowork-lottery.png";
 import bubbleBlowers from "../public/assets/projects/bubbles.png";
-import portfolio from "../public/assets/projects/portfolio.png";
 import morent from "../public/assets/projects/morent.png";
 import jobit from "../public/assets/projects/jobit.png";
 import aiChat from "../public/assets/projects/aiprompt.png";
@@ -180,7 +176,7 @@ export const technologies = [
   {
     id: 16,
     name: "Solidity",
-    icon: nodejs,
+    icon: solidity,
   },
   {
     id: 17,
@@ -214,7 +210,7 @@ export const technologies = [
   },
   {
     id: 23,
-    name: "English (ESL) Teacher",
+    name: "English Teacher",
     icon: teacher,
   },
   {
@@ -261,11 +257,6 @@ export const technologies = [
     id: 32,
     name: "Jest",
     icon: jest,
-  },
-  {
-    id: 33,
-    name: "RTL",
-    icon: rtl,
   },
 ];
 
@@ -429,7 +420,7 @@ export const projects = [
       </>
     ),
     secondImage: morentCars,
-    figmaDesign: morentFigma,
+    figmaDesign: jobitCardImage,
     challenges: [
       "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
       "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
@@ -1034,7 +1025,7 @@ export const strengths = [
     title: "Technical Ability",
     name: "Sujata Gunale",
     job: "Senior Engineer",
-    quote: `@hayleyiscoding 🦋, I was checking your PR, and I tried it
+    quote: `I was checking your PR, and I tried it
     locally. Works like a charm. Fantastic work`,
     isOpen: true,
   },
@@ -1043,7 +1034,7 @@ export const strengths = [
     title: "Problem Solving",
     name: "Brandon Etter",
     job: "Senior Engineer",
-    quote: `First, 🥇 @hayleyiscoding 🦋 - Custom test cases. Well
+    quote: `JSM Algorithm Challenge - First place. Custom test cases. Well
     commented and clear code. And not a single map, foreach or
     filter in sight.`,
   },
@@ -1052,17 +1043,17 @@ export const strengths = [
     title: "Communication",
     name: "Kamsi Obi",
     job: "Software Engineer",
-    quote: `Special shoutout to Hayley & 🌎 James for lighting up the
+    quote: `Special shoutout to Hayley & James for lighting up the
     masterclass with their outstanding performance and being a
-    true inspiration to the entire cohort! 🚀`,
+    true inspiration to the entire cohort!`,
   },
   {
     id: 4,
     title: "Team Work",
     name: "Haiying Liao",
     job: "Software Engineer",
-    quote: `Thank you, Hayley!! Yeah, we did all these together, what
-    an amazing teammate you are! ❤️❤️`,
+    quote: `Thank you, Hayley!! Yeah, we did all these together. What
+    an amazing teammate you are!`,
   },
   {
     id: 5,
