@@ -3,6 +3,7 @@ import html from "../public/assets/tech/html.png";
 import css from "../public/assets/tech/css.png";
 import reactjs from "../public/assets/tech/reactjs.png";
 import tailwind from "../public/assets/tech/tailwind.png";
+import api from "../public/assets/tech/api.png";
 import git from "../public/assets/tech/git.png";
 import github from "../public/assets/tech/github.png";
 import mui from "../public/assets/tech/materialui.png";
@@ -56,6 +57,31 @@ import {
   AiFillLinkedin,
 } from "react-icons/ai";
 import { SiHashnode } from "react-icons/si";
+
+export const techUrlMap = {
+  javascript,
+  html,
+  css,
+  reactjs,
+  tailwind,
+  git,
+  github,
+  mui,
+  nextjs,
+  express,
+  figma,
+  typescript,
+  nodejs,
+  mongodb,
+  redux,
+  hardhat,
+  solidity,
+  thegraph,
+  rainbowkit,
+  ipfs,
+  ethersjs,
+  api,
+};
 
 export const socialLinks = [
   {
@@ -175,141 +201,93 @@ export const technologies = [
   },
   {
     id: 16,
+    name: "API's",
+    icon: api,
+  },
+  {
+    id: 17,
     name: "Solidity",
     icon: solidity,
   },
   {
-    id: 17,
+    id: 18,
     name: "Ethers.js",
     icon: ethersjs,
   },
   {
-    id: 18,
+    id: 19,
     name: "Hardhat",
     icon: hardhat,
   },
   {
-    id: 19,
+    id: 20,
     name: "RainbowKit",
     icon: rainbowkit,
   },
   {
-    id: 20,
+    id: 21,
     name: "IPFS",
     icon: ipfs,
   },
   {
-    id: 21,
+    id: 22,
     name: "The Graph",
     icon: thegraph,
   },
   {
-    id: 22,
+    id: 23,
     name: "BSc Hons (Biomolecular Technology)",
     icon: graduate,
   },
   {
-    id: 23,
+    id: 24,
     name: "English Teacher",
     icon: teacher,
   },
   {
-    id: 24,
+    id: 25,
     name: "Technical Writing",
     icon: writing,
   },
   {
-    id: 25,
+    id: 26,
     name: "Community Management",
     icon: community,
   },
   {
-    id: 26,
+    id: 27,
     name: "Email Marketing",
     icon: email,
   },
   {
-    id: 27,
+    id: 28,
     name: "Business Automation",
     icon: automation,
   },
   {
-    id: 28,
+    id: 29,
     name: "Social Media Management",
     icon: smm,
   },
   {
-    id: 29,
+    id: 30,
     name: "Git",
     icon: git,
   },
   {
-    id: 30,
+    id: 31,
     name: "Github",
     icon: github,
   },
   {
-    id: 31,
+    id: 32,
     name: "Agile",
     icon: agile,
   },
   {
-    id: 32,
+    id: 33,
     name: "Jest",
     icon: jest,
-  },
-];
-
-export const secondarySkillsData = [
-  {
-    id: 1,
-    name: "Next.js",
-    icon: "TbBrandNextjs",
-  },
-  {
-    id: 2,
-    name: "Solidity",
-    icon: "SiSolidity",
-  },
-  {
-    id: 3,
-    name: "Ethers.js",
-    icon: "FaEthereum",
-  },
-  {
-    id: 4,
-    name: "Hardhat",
-    icon: "FaHardHat",
-  },
-  {
-    id: 5,
-    name: "The Graph",
-    icon: "SiGraphql",
-  },
-  {
-    id: 6,
-    name: "GraphQL",
-    icon: "SiGraphql",
-  },
-  {
-    id: 7,
-    name: "Node.js",
-    icon: "SiNodedotjs",
-  },
-  {
-    id: 8,
-    name: "Typescript",
-    icon: "SiTypescript",
-  },
-  {
-    id: 9,
-    name: "Angular",
-    icon: "SiAngular",
-  },
-  {
-    id: 10,
-    name: "SASS",
-    icon: "SiSass",
   },
 ];
 
@@ -700,28 +678,37 @@ export const workData = [
     id: 1,
     duration: "6 Months",
     type: "Remote, Full-Time",
-    title: "Javascript Mastery",
-    place: "Croatia, Online",
+    title: "Full-Stack Engineer",
+    place: "Javascript Mastery, Croatia, Online",
     body: "Open source contributions to various full-stack web2 projects. A program coordinated by one of the top 100 software-developer influencers in the world - Adrian Hajdin. Daily tasks included PR submissions with senior engineer code reviews, working to agile methodologies with various frontend and backend technologies",
   },
   {
     id: 2,
     duration: "3 Months",
     type: "Remote, Part-Time",
-    title: "Women's Blockchain Development Program",
+    title: "Blockchain Engineer",
     place: "Women Build Web3, Online",
     body: "I was selected to receive funding from 'Women Build Web3' to build a blockchain start-up from scratch. I built a coworking lottery for women who work online to raise funds for their online businesses. I presented this project on Dec 22nd, 2022. Some of the tech I used included Solidity, Chainlink, Airtable API, Hardhat, Ether.js, RainbowKit, Polygon Network, etc.",
   },
   {
     id: 3,
-    duration: "2 Months",
-    type: "Freelance, Remote",
-    title: "Web Developer",
-    place: "Bubble Blowers Swim School, South Africa",
-    body: "I coded a website using HTML/CSS/Javascript for a swim school in South Africa. I made it mobile responsive, added the ability for potential students to contact my client via Whatsapp, added a Google Map, Google Reviews and a Google-My-Business listing. The client reported a large number of student sign-ups after the website went live.",
+    duration: "3 months",
+    type: "Founder, Part-Time",
+    title: "Frontend Engineer",
+    place: "Online CoWork, Online",
+    body: `This was my first remote position. I was in charge of screening, interviewing and placing English Teachers in private and government schools around the world. In particular, I worked with the Colombian government to make their English program a success. I was also in charge of the company's community and social media. During this time, I lived in and travelled to many countries. This taught me invaluable remote work skills such as adaptability, discipline and team communication. I also arranged women's co-working events in Thailand and India.`,
   },
   {
     id: 4,
+    duration: "2 Months",
+    type: "Freelance, Remote",
+    title: "Frontend Engineer",
+    place: "Bubble Blowers Swim School, South Africa",
+    body: "I coded a website using HTML/CSS/Javascript for a swim school in South Africa. I made it mobile responsive, added the ability for potential students to contact my client via Whatsapp, added a Google Map, Google Reviews and a Google-My-Business listing. The client reported a large number of student sign-ups after the website went live.",
+  },
+
+  {
+    id: 5,
     duration: "12 Years",
     type: "Remote, Part-Time",
     title: "English (ESL) Teacher",
@@ -729,7 +716,7 @@ export const workData = [
     body: "I work remotely part-time teaching English to professionals from around the world - such as software engineers, lawyers, accountants, etc. Also, university students and children. My students mostly come from South Korea, Japan, Saudi Arabia, Oman, Brazil and Turkey.",
   },
   {
-    id: 5,
+    id: 6,
     duration: "18 months",
     type: "Remote, Full-Time",
     title: "Recruiting Manager",

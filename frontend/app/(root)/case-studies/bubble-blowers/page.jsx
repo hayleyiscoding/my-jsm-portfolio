@@ -1,26 +1,30 @@
 import ProjectDetails from "@/components/ProjectDetails";
-import { projects } from "@/constants";
+import { getProjectDetails } from "@/sanity/lib/client";
 
-const BubbleBlowers = () => {
-  const project = projects[4];
+const BubbleBlowers = async () => {
+  const projects = await getProjectDetails();
+  const project = projects.find((item) => item.name === "Bubble Blowers");
 
   return (
     <>
       <ProjectDetails
-        header={project.title}
-        imageProjectDetails={project.imageProjectDetails}
-        url={project.url}
-        github={project.github}
-        myRole={project.myRole}
-        startDate={project.startDate}
-        endDate={project.endDate}
-        techStack={project.techStack}
-        longDescription={project.longDescription}
-        problemStatement={project.problemStatement}
-        secondImage={project.secondImage}
-        figmaDesign={project.figmaDesign}
-        challenges={project.challenges}
-        learnings={project.learnings}
+        phrase1={project?.phrase1}
+        phrase2={project?.phrase2}
+        phrase3={project?.phrase3}
+        headerImage={project?.headerImage}
+        url={project?.url}
+        github={project?.github}
+        myRole={project?.myRole}
+        startDate={project?.startDate}
+        endDate={project?.endDate}
+        techStack={project?.techStack}
+        longDescription={project?.longDescription}
+        problemStatement={project?.problemStatement}
+        secondImage={project?.secondImage}
+        figmaDesign={project?.figmaDesign}
+        challenges={project?.challenges}
+        learnings={project?.learnings}
+        color={project?.color}
       />
     </>
   );

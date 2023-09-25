@@ -1,6 +1,7 @@
 "use client";
 
 import { AiOutlineCheck, AiOutlineCopy } from "react-icons/ai";
+
 import useCopyToClipboard from "../lib/useCopyToClipboard";
 
 interface CopyButtonProps {
@@ -8,7 +9,7 @@ interface CopyButtonProps {
 }
 
 const CopyButton: React.FC<CopyButtonProps> = ({ text }) => {
-  // isCopied is reset after 3 second timeout
+  // isCopied is reset after 3 second time out
   const [isCopied, handleCopy] = useCopyToClipboard(3000);
 
   return (

@@ -1,6 +1,6 @@
-import { Rule, SchemaTypeDefinition } from "sanity";
+import { Rule } from "sanity";
 
-export const projects: { types: SchemaTypeDefinition[] } = {
+const projects = {
   name: "projects",
   title: "Projects",
   type: "document",
@@ -9,7 +9,7 @@ export const projects: { types: SchemaTypeDefinition[] } = {
       name: "name",
       title: "Name",
       type: "string",
-      validation: (Rule) =>
+      validation: (Rule: Rule) =>
         Rule.required().custom((value: string) => {
           const capitalizedPhrase = value
             .split(" ")
@@ -25,7 +25,7 @@ export const projects: { types: SchemaTypeDefinition[] } = {
       name: "superscript",
       title: "Is this Web2 or Web3?",
       type: "string",
-      validation: (Rule) =>
+      validation: (Rule: Rule) =>
         Rule.custom((value: string) => {
           if (!/^(Web2|Web3)$/.test(value)) {
             return 'Only "Web2" or "Web3" are allowed';
@@ -37,7 +37,7 @@ export const projects: { types: SchemaTypeDefinition[] } = {
       name: "type",
       title: "Type of Website",
       type: "string",
-      validation: (Rule) =>
+      validation: (Rule: Rule) =>
         Rule.required().custom((value: string) => {
           const capitalizedPhrase = value
             .split(" ")
@@ -56,7 +56,7 @@ export const projects: { types: SchemaTypeDefinition[] } = {
       options: {
         source: "name",
       },
-      validation: (rule: Rule) => rule.required(),
+      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: "image",
@@ -71,15 +71,16 @@ export const projects: { types: SchemaTypeDefinition[] } = {
           validation: (rule: Rule) => rule.required(),
         },
       ],
-      validation: (rule: Rule) => rule.required(),
+      validation: (Rule: Rule) => Rule.required(),
     },
-
-    {
-      name: "tech",
-      title: "Tech",
-      type: "array",
-      of: [{ type: "string", validation: (rule: Rule) => rule.required() }],
-      validation: (rule: Rule) => rule.required().min(1),
-    },
+    // {
+    //   name: "tech",
+    //   title: "Tech",
+    //   type: "array",
+    //   of: [{ type: "string", validation: (rule: Rule) => rule.required() }],
+    //   validation: (rule: Rule) => rule.required().min(1),
+    // },
   ],
 };
+
+export default projects;

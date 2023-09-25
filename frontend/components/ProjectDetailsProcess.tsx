@@ -21,6 +21,8 @@ const ProjectDetailsProcess = () => {
                   src={item.icon}
                   alt={`${item} icon`}
                   className='w-[20px] lg:w-[40px] brightness-100 contrast-200 grayscale'
+                  width={20}
+                  height={20}
                 />
               </div>
               <p className='text-white mt-3 flex items-center justify-center dark:text-white text-xs'>

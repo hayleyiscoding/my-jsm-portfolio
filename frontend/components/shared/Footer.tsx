@@ -9,14 +9,14 @@ const Footer = () => {
         <hr className='border-cream mt-5' />
 
         <div className='mt-5 sm:flex sm:items-center sm:justify-between'>
-          <ul className='flex items-center justify-center space-x-6 sm:order-2 sm:justify-end'>
+          <ul className='footerSocialDiv'>
             {socialLinks.map((link) => (
               <li key={link.id}>
                 <Link
                   href={link.url}
                   target='_blank'
                   rel='noopener'
-                  className='text-white focus:ring-primary focus:ring-offset-secondary inline-flex rounded transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1 dark:text-white'
+                  className='footerSocial'
                 >
                   {link.icon}
                 </Link>
@@ -24,7 +24,7 @@ const Footer = () => {
             ))}
           </ul>
 
-          <p className='text-white mt-6 text-center font-sans text-sm font-normal text-opacity-50 dark:text-white sm:order-1 sm:mt-0 sm:text-left'>
+          <p className='footerText'>
             <span className='text-white dark:text-custom-red leading-10 tracking-wider '>
               Designed and developed with ❤️ by Hayley
             </span>

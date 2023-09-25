@@ -21,6 +21,8 @@ const ProjectDetailsMoreCases = () => {
                 src={project.cardImage}
                 alt='Thumbnail of project'
                 className='mb-6 w-full rounded-md object-cover'
+                width={500}
+                height={500}
               />
               <h5 className='text-white dark:text-custom-red mb-2 text-xl font-bold'>
                 {project.name}

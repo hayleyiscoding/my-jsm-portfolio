@@ -17,6 +17,8 @@ const SkillsIcons: React.FC<SkillsIconsProps> = ({ id, name, icon }) => {
         src={icon}
         alt={`${name} icon`}
         className='w-[50px] p-2 lg:w-[60px] dark:contrast-100 contrast-400'
+        width={60}
+        height={60}
       />
 
       {/* Name of Icon */}

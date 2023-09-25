@@ -1,10 +1,8 @@
-"use client";
-
 import { AiFillLinkedin } from "react-icons/ai";
 
 import { strengths } from "@/constants";
 import SectionHeader from "./SectionHeader";
-import AboutCard from "@/components/AboutCard";
+import AboutCard from "./AboutCard";
 
 const About = () => {
   return (
@@ -28,12 +26,10 @@ const About = () => {
 
                 <div className='flex items-center justify-between'>
                   <div className='mr-auto mt-4 min-w-0'>
-                    <p className='truncate text-base font-semibold text-white'>
+                    <p className='text-base font-semibold text-white'>
                       {strength.name}
                     </p>
-                    <p className='truncate text-xs text-white'>
-                      {strength.job}
-                    </p>
+                    <p className='text-xs text-white'>{strength.job}</p>
                   </div>
                   <div className='text-white'>
                     <AiFillLinkedin size={30} className='mt-3' />

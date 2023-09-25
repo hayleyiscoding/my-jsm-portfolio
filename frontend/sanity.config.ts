@@ -3,20 +3,22 @@
  */
 
 import { visionTool } from "@sanity/vision";
-import { defineConfig } from "sanity";
+import { SchemaTypeDefinition, defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from "@/sanity/env";
 
-import schemas from "@/sanity/schemas";
+import { schemas } from "@/sanity/schemas/index";
 
 export default defineConfig({
+  name: "portfolio",
+  title: "Hayley - Portfolio",
   basePath: "/admin",
   projectId,
   dataset,
   // Add and edit the content schema in the './sanity/schema' folder
-  schema: { types: schemas },
+  schema: { types: schemas as SchemaTypeDefinition[] },
   plugins: [
     deskTool(),
     // Vision is a tool that lets you query your content with GROQ in the studio

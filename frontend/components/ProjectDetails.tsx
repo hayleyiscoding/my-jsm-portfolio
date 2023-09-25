@@ -8,32 +8,14 @@ import ProjectDetailsProblem from "./ProjectDetailsProblem";
 import ProjectDetailsProcess from "./ProjectDetailsProcess";
 import ProjectDetailsLearnings from "./ProjectDetailsLearnings";
 import ProjectDetailsMoreCases from "./ProjectDetailsMoreCases";
+import { ProjectDetails } from "@/sanity/types/ProjectDetails";
+import { urlForImage } from "@/sanity/lib/image";
 
-interface ProjectDetailsProps {
-  phrase1: string;
-  phrase2: string;
-  phrase3: string;
-  imageProjectDetails: string;
-  url: string;
-  github: string;
-  myRole: string;
-  startDate: string;
-  endDate: string;
-  techStack: Array<string>;
-  longDescription: string;
-  problemStatement: string;
-  secondImage: string;
-  figmaDesign: string;
-  challenges: Array<string>;
-  learnings: Array<string>;
-  color: string;
-}
-
-const ProjectDetails: React.FC<ProjectDetailsProps> = ({
+const ProjectDetails: React.FC<ProjectDetails> = ({
   phrase1,
   phrase2,
   phrase3,
-  imageProjectDetails,
+  headerImage,
   url,
   github,
   myRole,
@@ -48,6 +30,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   learnings,
   color,
 }) => {
+  const imageUrl = urlForImage(figmaDesign).width(8000).url() || "";
   return (
     <main
       id='projectDetails'
@@ -57,7 +40,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         phrase1={phrase1}
         phrase2={phrase2}
         phrase3={phrase3}
-        imageProjectDetails={imageProjectDetails}
+        headerImage={headerImage}
         url={url}
         github={github}
       />
@@ -86,9 +69,11 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           <h3>High Fidelity Figma Design</h3>
         </div>
         <Image
-          src={figmaDesign}
+          src={imageUrl}
           alt='Figma Design'
           className='-mt-1 h-[400px] rounded-sm object-cover'
+          width={10000}
+          height={400}
         />
       </section>
 

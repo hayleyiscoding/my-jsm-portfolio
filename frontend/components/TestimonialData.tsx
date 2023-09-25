@@ -21,6 +21,8 @@ const TestimonialData: React.FC<TestimonialDataProps> = ({
           className='grayscale-40 mx-auto h-[100px] w-[100px] rounded-[100%] object-cover p-[7px]'
           src={avatar}
           alt='Avatar'
+          width={100}
+          height={100}
         />
       </div>
 

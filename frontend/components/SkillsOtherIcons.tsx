@@ -21,6 +21,7 @@ const SkillsOtherIcons: React.FC<SkillsOtherIconsProps> = ({
         src={icon}
         alt={`${name} icon`}
         width={70}
+        height={70}
         className='w-full max-w-[40px] brightness-100 contrast-200 grayscale'
       />
 

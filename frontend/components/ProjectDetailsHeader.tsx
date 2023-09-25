@@ -4,12 +4,14 @@ import Link from "next/link";
 import SectionHeader from "./SectionHeader";
 import { AiFillGithub } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
+import { urlForImage } from "@/sanity/lib/image";
+import type { Image as ImageType } from "sanity";
 
 interface ProjectDetailsHeaderProps {
   phrase1: string;
   phrase2: string;
   phrase3: string;
-  imageProjectDetails: string;
+  headerImage: ImageType;
   url: string;
   github: string;
 }
@@ -18,10 +20,12 @@ const ProjectDetailsHeader: React.FC<ProjectDetailsHeaderProps> = ({
   phrase1,
   phrase2,
   phrase3,
-  imageProjectDetails,
+  headerImage,
   url,
   github,
 }) => {
+  const imageProjectDetailsUrl =
+    headerImage && urlForImage(headerImage).width(8000).url();
   return (
     <header className='mt-8 md:mt-12'>
       <div className='px-6 text-center'>
@@ -37,9 +41,11 @@ const ProjectDetailsHeader: React.FC<ProjectDetailsHeaderProps> = ({
         </div>
       </div>
       <Image
-        src={imageProjectDetails}
+        src={imageProjectDetailsUrl || ""}
         alt='Screenshot of project in the mockup of a laptop and cell phone'
-        className='object-cover max-w-[400px] md:max-w-[700px] px-6 mx-auto mt-8'
+        className='object-cover max-w-[400px] md:max-w-[800px] px-6 mx-auto mt-8'
+        width={1000}
+        height={800}
       />
       <div className='text-center m-12'>
         <Link

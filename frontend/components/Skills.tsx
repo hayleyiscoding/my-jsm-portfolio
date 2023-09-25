@@ -16,19 +16,19 @@ const Skills = () => {
           <SkillSection type='Frontend' startIndex={2} endIndex={10} />
 
           {/* Backend */}
-          <SkillSection type='Backend' startIndex={10} endIndex={14} />
+          <SkillSection type='Backend' startIndex={10} endIndex={15} />
 
           {/* Web3 */}
-          <SkillSection type='Web 3' startIndex={14} endIndex={20} />
+          <SkillSection type='Web 3' startIndex={15} endIndex={21} />
 
           {/* Remote Teamwork and Testing */}
           <SkillSection
             type='Remote Teamwork and Testing'
-            startIndex={27}
-            endIndex={33}
+            startIndex={28}
+            endIndex={34}
           />
           {/* Other Skills */}
-          <SkillsOther type='Other Skills' startIndex={20} endIndex={27} />
+          <SkillsOther type='Other Skills' startIndex={21} endIndex={28} />
         </div>
       </div>
     </section>

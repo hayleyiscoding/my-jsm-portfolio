@@ -1,53 +1,59 @@
 import { createClient, groq } from "next-sanity";
 
 import { apiVersion, dataset, projectId, useCdn } from "../env";
-// import { PortableTextBlock } from "sanity";
-// import { url } from "inspector";
-// import image from "next/image";
 
-// type Project = {
-//   _id: string;
-//   _createdAt: string;
-//   name: string;
-//   slug: {
-//     current: string;
-//   };
-// };
+import { Project } from "../types/Project";
+import { ProjectDetails } from "../types/ProjectDetails";
 
-type Project = {
-  _createdAt: string;
-  _id: string;
-  name: string;
-  type: string;
-  superscript: string;
-  // image: {
-  //   asset: {
-  //     _ref: string;
-  //   };
-  // };
-  slug: {
-    current: string;
-  };
-};
-
-export async function getProjects() {
+export async function getProjects(): Promise<Project[]> {
+  console.log(apiVersion, dataset, projectId, useCdn);
   const client = createClient({
     apiVersion,
     dataset,
     projectId,
     useCdn,
   });
-  // return client.fetch<Project[]>(groq`*[_type == "projects"]{
-  //   _createdAt,
-  //   _id,
-  //   name,
-  //   type,
-  // superscript,
-  // tech,
-  //   "slug": slug.current,
-  //   "image": image.asset > url,
+  return client.fetch(groq`*[_type == 'projects']{
+    _id,
+    _createdAt,
+    name,
+    type,
+    superscript,
+    slug,
+    image,
+   }`);
+}
 
-  // }`);
-  return client.fetch<Project[]>(groq`*[_type == "projects"]
-  `);
+export async function getProjectDetails(): Promise<ProjectDetails[]> {
+  const client = createClient({
+    apiVersion,
+    dataset,
+    projectId,
+    useCdn,
+  });
+  return client.fetch(groq`*[_type == 'projectDetails']{
+    _id,
+    _createdAt,
+    name,
+    slug,
+    phrase1,
+    phrase2,
+    phrase3,
+    type,
+    url,
+    github,
+    headerImage,
+    secondImage,
+    figmaDesign,
+    myRole,
+    startDate,
+    endDate,
+    techStack,
+    longDescription,
+    problemStatement,
+    challenges,
+    color,
+    learnings,
+  }
+`);
 }

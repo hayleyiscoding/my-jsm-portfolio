@@ -28,9 +28,7 @@ const BackToTopButton: React.FC = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`bg-custom-black dark:bg-custom-red fixed bottom-4 right-4 rounded-md px-4 py-2 text-white transition-opacity ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+      className={`backToTopButton ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
       <AiOutlineArrowUp size={20} />
     </button>

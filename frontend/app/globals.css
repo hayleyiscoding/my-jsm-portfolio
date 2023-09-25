@@ -200,6 +200,89 @@
 }
 
 @layer components {
+  /* Navbar */
+  .logoName {
+    @apply text-white dark:text-custom-red self-center text-xs sm:text-sm font-medium tracking-wide dark:font-medium lg:text-lg;
+  }
+
+  .logo {
+    @apply dark:bg-custom-red bg-white mx-3 h-8 p-1 dark:text-white text-custom-red md:ml-2;
+  }
+
+  .navDesktop {
+    @apply dark:custom-neumorphic-process my-6 flex w-full items-center justify-between rounded-3xl custom-neumorphic-teal px-4 py-2 md:px-6;
+  }
+
+  .resumeButtonDesktop {
+    @apply text-white hover:text-white flex cursor-pointer items-center justify-center rounded-xl px-5 py-3 text-[15px] font-light leading-[4px] dark:font-medium dark:hover:text-white border border-white custom-neumorphic-teal-pressed dark:hover:border-custom-red dark:hover:bg-custom-black dark:hover:custom-neumorphic-process bg-custom-red;
+  }
+
+  .buttonMobile {
+    @apply text-white block items-center rounded-xl py-1 text-sm dark:text-white lg:hidden;
+  }
+
+  .resumeButtonMobile {
+    @apply flex cursor-pointer justify-center px-3 py-2 pb-4 text-[17px] font-medium hover:underline dark:border-white text-white dark:text-custom-red;
+  }
+
+  /* Footer */
+  .footerSocialDiv {
+    @apply flex items-center justify-center space-x-6 sm:order-2 sm:justify-end;
+  }
+
+  .footerSocial {
+    @apply text-white inline-flex rounded transition-all duration-200 focus:outline-none dark:text-white;
+  }
+
+  .footerText {
+    @apply text-white mt-6 text-center font-sans text-sm font-normal text-opacity-50 dark:text-white sm:order-1 sm:mt-0 sm:text-left;
+  }
+
+  /* About Card */
+  .summary {
+    @apply dark:custom-neumorphic-process -ml-1 mb-4 flex flex-col items-center justify-center gap-2 rounded-2xl bg-white p-4 text-center shadow-xl;
+  }
+
+  /* Back to Top */
+  .backToTopButton {
+    @apply bg-custom-black dark:bg-custom-red fixed bottom-4 right-4 rounded-md px-4 py-2 text-white transition-opacity;
+  }
+
+  /* Contact Block */
+  .contactBlockContainer {
+    @apply custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed border-custom-red mx-8 lg:mx-24 flex flex-col items-center justify-between gap-6 rounded-xl p-8 lg:mb-0 lg:flex-row;
+  }
+
+  .contactBlockTitle {
+    @apply dark:text-custom-red text-white pb-1 text-2xl font-normal md:text-3xl lg:text-4xl;
+  }
+
+  /* .contactBlockButton {
+    @apply custom-neumorphic-teal hover:custom-neumorphic-teal-pressed dark:custom-neumorphic-process hover:dark:custom-neumorphic-black-pressed text-md w-full min-w-[200px] cursor-pointer flex-col flex-wrap items-center justify-center rounded-md px-6 py-5 font-normal leading-5 shadow-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-white dark:text-custom-red md:flex md:text-lg;
+  } */
+
+  /* Hero */
+
+  .heroGrid {
+    @apply ml-2 grid grid-cols-1 place-items-center items-center lg:ml-12 lg:grid-cols-2;
+  }
+
+  .jobTitle {
+    @apply text-white dark:text-custom-red mt-6 text-xl font-medium text-opacity-90 dark:font-normal md:text-2xl lg:-mt-16;
+  }
+
+  .heroAbout {
+    @apply text-sm text-white mx-auto mt-3 max-w-2xl font-light leading-relaxed  dark:font-extralight dark:text-white md:mt-8;
+  }
+
+  .heroResumeButton {
+    @apply custom-neumorphic-teal dark:custom-neumorphic-process hover:custom-neumorphic-teal-pressed dark:hover:custom-neumorphic-black-pressed text-sm mt-8 flex cursor-pointer items-center justify-center rounded-lg px-6 py-[15px] font-medium leading-5 text-white dark:text-custom-red transition-all duration-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2  dark:border-custom-red lg:w-auto bg-black;
+  }
+
+  .heroEmail {
+    @apply text-white text-sm mb-10 ml-0 mt-5 flex w-full cursor-pointer items-center justify-center rounded-lg bg-custom-red px-6 py-[15px] font-medium leading-5 transition-all duration-200 dark:border-white custom-neumorphic-teal-pressed dark:text-white lg:w-auto;
+  }
+
   /* Testimonials - Swiper.js */
 
   .mySwiper {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { techUrlMap } from "@/constants";
 
 const ProjectDetailsTech = ({ techStack }: { techStack: Array<string> }) => {
   return (
@@ -17,9 +18,10 @@ const ProjectDetailsTech = ({ techStack }: { techStack: Array<string> }) => {
               className='dark:custom-neumorphic-process dark:hover:custom-neumorphic-black-pressed custom-neumorphic-teal hover:custom-neumorphic-teal-pressed mx-auto flex h-[80px] w-[80px] cursor-pointer flex-col items-center justify-center rounded-[100%] bg-white p-3 shadow-2xl dark:border-none'
             >
               <Image
-                src={item}
+                src={techUrlMap[item]}
                 alt={`${item} icon`}
-                width={70}
+                width={50}
+                height={50}
                 className='w-[50px] p-2 lg:w-[60px] dark:contrast-100 contrast-200'
               />
             </li>
