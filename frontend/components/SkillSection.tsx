@@ -24,7 +24,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({
             key={item.id}
             name={item.name}
             id={item.id}
-            icon={item.icon as string}
+            icon={item.icon}
           />
         ))}
       </ul>

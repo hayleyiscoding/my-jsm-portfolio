@@ -98,9 +98,6 @@
   .custom-neumorphic-white {
     @apply shadow-[6px_6px_14px_#dbdbdb,-6px_-6px_14px_#ffffff];
     background: #ffffff;
-    -webkit-box-shadow:
-      6px 6px 14px #dbdbdb,
-      -6px -6px 14px #ffffff;
   }
 
   /* Black, Teal, White - Pressed */

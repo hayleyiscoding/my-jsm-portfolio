@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface SkillsIconsProps {
   name: string;
-  icon: string;
+  icon: string | StaticImageData;
   id: number;
 }
 
