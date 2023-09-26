@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface TestimonialDataProps {
-  avatar: string;
+  avatar: string | StaticImageData;
   testimonial: string;
   name: string;
   company: string;
