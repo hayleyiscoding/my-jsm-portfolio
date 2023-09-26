@@ -14,7 +14,7 @@ const ProjectDetailsMoreCases: React.FC<ProjectDetailsMoreCasesProps> = async ({
 }) => {
   const projects = await getProjectDetails();
 
-  let filteredProjects = projects
+  const filteredProjects = projects
     ?.filter((project) => project.name !== projectName)
     .slice(0, 2);
 

@@ -38,6 +38,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
     "sanity": "^3.16.7",
+    "sharp": "^0.32.6",
     "styled-components": "5.2",
     "swiper": "^10.2.0",
     "swiper-react": "^1.0.0",

@@ -1,6 +1,8 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import { techUrlMap } from "@/constants";
+
+const TECH_MAP: { [key: string]: string | StaticImageData } = techUrlMap;
 
 const ProjectDetailsTech = ({ techStack }: { techStack: Array<string> }) => {
   return (
@@ -16,17 +18,19 @@ const ProjectDetailsTech = ({ techStack }: { techStack: Array<string> }) => {
       {/* Tech Icons */}
       <div>
         <ul className='flex flex-wrap items-center justify-center gap-5 py-6'>
-          {techStack.map((item) => (
-            <li key={item} className='techStackListItem'>
-              <Image
-                src={techUrlMap[item]}
-                alt={`${item} icon`}
-                width={50}
-                height={50}
-                className='techStackImage'
-              />
-            </li>
-          ))}
+          {techStack.map((item) => {
+            return (
+              <li key={item} className='techStackListItem'>
+                <Image
+                  src={TECH_MAP[item]}
+                  alt={`${item} icon`}
+                  width={50}
+                  height={50}
+                  className='techStackImage'
+                />
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
