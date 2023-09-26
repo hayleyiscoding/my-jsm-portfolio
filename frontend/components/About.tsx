@@ -6,10 +6,7 @@ import AboutCard from "./AboutCard";
 
 const About = () => {
   return (
-    <section
-      id='about'
-      className='mt-10 w-full rounded-2xl py-7 sm:px-6 lg:px-24'
-    >
+    <section id='about' className='mt-10 w-full rounded-2xl py-7 px-6 lg:px-24'>
       <div className='mb-12 pt-9 text-center'>
         <SectionHeader phrase1={`About `} phrase2='Me' />
       </div>

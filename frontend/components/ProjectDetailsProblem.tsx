@@ -22,7 +22,7 @@ const ProjectDetailsProblem: React.FC<ProjectDetailsProblemProps> = ({
         <Image
           src={urlForImage(secondImage).width(8000).url()}
           alt='Image related to project'
-          className='rounded-md grayscale'
+          className='rounded-md'
           width={8000}
           height={800}
         />

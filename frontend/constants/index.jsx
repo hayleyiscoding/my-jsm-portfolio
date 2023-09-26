@@ -1,56 +1,3 @@
-import javascript from "../public/assets/tech/javascript.png";
-import html from "../public/assets/tech/html.png";
-import css from "../public/assets/tech/css.png";
-import reactjs from "../public/assets/tech/reactjs.png";
-import tailwind from "../public/assets/tech/tailwind.png";
-import api from "../public/assets/tech/api.png";
-import git from "../public/assets/tech/git.png";
-import github from "../public/assets/tech/github.png";
-import mui from "../public/assets/tech/materialui.png";
-import nextjs from "../public/assets/tech/nextjs.png";
-import express from "../public/assets/tech/express.png";
-import figma from "../public/assets/tech/figma.png";
-import typescript from "../public/assets/tech/typescript.png";
-import nodejs from "../public/assets/tech/nodejs.png";
-import mongodb from "../public/assets/tech/mongodb.png";
-import redux from "../public/assets/tech/redux.png";
-import hardhat from "../public/assets/tech/hardhat.png";
-import solidity from "../public/assets/tech/solidity.png";
-import thegraph from "../public/assets/tech/thegraph.png";
-import rainbowkit from "../public/assets/tech/rainbowkit.png";
-import ipfs from "../public/assets/tech/ipfs.png";
-import ethersjs from "../public/assets/tech/ethersjs.png";
-import automation from "../public/assets/tech/automation.png";
-import community from "../public/assets/tech/community.png";
-import email from "../public/assets/tech/email.png";
-import agile from "../public/assets/tech/agile.png";
-import jest from "../public/assets/tech/jest.png";
-import writing from "../public/assets/tech/writing.png";
-import graduate from "../public/assets/tech/graduate.png";
-import teacher from "../public/assets/tech/teacher.png";
-import smm from "../public/assets/tech/smm.png";
-import crowdfunding from "../public/assets/projects/crowdfundingRev.png";
-import bubbleBlowers from "../public/assets/projects/bubbles.png";
-import morent from "../public/assets/projects/morent.png";
-import jobit from "../public/assets/projects/jobit.png";
-import aiChat from "../public/assets/projects/aiprompt.png";
-import austinAvatar from "../public/assets/testimonials/austin-avatar.jpg";
-import sallyAvatar from "../public/assets/testimonials/sally-avatar.png";
-import matheusAvatar from "../public/assets/testimonials/matheus-avatar.jpeg";
-import camiAvatar from "../public/assets/testimonials/cami-avatar.png";
-import kristenAvatar from "../public/assets/testimonials/kristen-avatar.avif";
-import morentLaptop from "../public/assets/projects/morent-laptop.png";
-import jobitLaptop from "../public/assets/projects/jobit-laptop.png";
-import morentFigma from "../public/assets/projects/morentFigma.png";
-import morentCars from "../public/assets/projects/morentCars.png";
-import morentCardImage from "../public/assets/projects/morentCardImage.png";
-import jobitCardImage from "../public/assets/projects/jobitCardImage.png";
-import process1 from "../public/assets/process/process1.svg";
-import process2 from "../public/assets/process/process2.svg";
-import process3 from "../public/assets/process/process3.svg";
-import process4 from "../public/assets/process/process4.svg";
-import process5 from "../public/assets/process/process5.svg";
-
 import {
   AiFillGithub,
   AiFillTwitterCircle,
@@ -58,10 +5,69 @@ import {
 } from "react-icons/ai";
 import { SiHashnode } from "react-icons/si";
 
+import {
+  api,
+  solidity,
+  javascript,
+  reactjs,
+  tailwind,
+  git,
+  github,
+  mui,
+  nextjs,
+  express,
+  figma,
+  typescript,
+  nodejs,
+  mongodb,
+  redux,
+  hardhat,
+  thegraph,
+  rainbowkit,
+  ipfs,
+  ethersjs,
+  automation,
+  community,
+  email,
+  agile,
+  jest,
+  writing,
+  graduate,
+  teacher,
+  smm,
+  austinAvatar,
+  sallyAvatar,
+  matheusAvatar,
+  camiAvatar,
+  kristenAvatar,
+  process1,
+  process2,
+  process3,
+  process4,
+  process5,
+} from "../public/assets/index";
+
+export const heroInfo = {
+  job: "React Developer (Remote)",
+  text: (
+    <>
+      I am a motivated and reliable Front-End/Full-Stack Developer with a focus
+      on React.js, Next 13 and Typescript. <br></br> <br></br> I also have
+      experience with web3 (blockchain) technologies - such as Solidity and
+      Ethers.js.
+      <br></br> <br></br>I am based in Australia/Asia but I am flexible in terms
+      of working hours and can adapt to your time zone needs. <br></br>{" "}
+      <br></br> I am eager to contribute to your company goals and would love to
+      connect with you.
+    </>
+  ),
+  email: "hayleyiscoding@gmail.com",
+  resume:
+    "https://drive.google.com/file/d/1wGvI9tu7ypPXCM3HD7Q6za1B-6-SRW2g/view?usp=sharing",
+};
+
 export const techUrlMap = {
   javascript,
-  html,
-  css,
   reactjs,
   tailwind,
   git,
@@ -132,12 +138,12 @@ export const technologies = [
   {
     id: 1,
     name: "HTML",
-    icon: html,
+    icon: "",
   },
   {
     id: 2,
     name: "CSS",
-    icon: css,
+    icon: "",
   },
   {
     id: 3,
@@ -291,296 +297,6 @@ export const technologies = [
   },
 ];
 
-export const projects = [
-  // {
-  //   id: 1,
-  //   name: "My Portfolio",
-  //   type: "Web2 / Web3",
-  //   about:
-  //     "I had a lot of fun creating this portfolio website! I Used Vite and implemented neumorphic design with Tailwind CSS, React hooks, various libraries such as Masonry, CSS animations that are activated on scroll/hover, Email.js with error handling and fetched data from the Hashnode API using GraphQL.",
-  //   tech: "#React #HashnodeAPI #GraphQL #Tailwind",
-  //   url: "https://hayleyiscoding.com",
-  //   github: "https://github.com/hayleyiscoding/my-portfolio",
-  //   image: portfolio,
-  // },
-
-  {
-    id: 1,
-    name: "Morent",
-    slug: "morent",
-    title: "Morent - A Car Rental Website",
-    type: "Web2",
-    about:
-      "A web application where users can share and discover artificial intelligence prompts from ChatGPT. I created it using Next.js - and used Next-Auth for user login, MongoDB for the database and Next.js's serverless backend ",
-    tech: "#Next.js #Next-Auth #MongoDB #Tailwind",
-    url: "https://cohort5-code-fam-car-rent.vercel.app/",
-    github: "",
-    image: morent,
-    imageProjectDetails: morentLaptop,
-    myRole: "Software Engineer",
-    startDate: "06/08/2023",
-    endDate: "05/09/2023",
-    techStack: [reactjs, typescript, redux, tailwind, nodejs, express, mongodb],
-    longDescription: (
-      <>
-        Morent, a cutting-edge car rental application that was developed using
-        the MERN stack. The app boasts a dynamic homepage that showcases
-        featured vehicles, along with convenient pickup & drop-off location
-        options & a comprehensive list of available cars. <br />
-        <br />
-        My team and I also developed the car listing page which offers a search
-        bar and various filtering options for users to find the perfect vehicle.
-        Additionally, it has a car details page which provides users with
-        detailed information along with suggestions for other recommended
-        vehicles.
-        <br />
-        <br />
-        Car owners are also able to list their cars for rent through our Add Car
-        page, while users can easily track their rented and rented-out cars
-        through their profile page. Overall, we&apos;ve created an intuitive and
-        user-friendly MVP version of the platform that will make renting a car a
-        breeze.
-      </>
-    ),
-    problemStatement: `One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals.`,
-    secondImage: morentCars,
-    figmaDesign: morentFigma,
-    challenges: [
-      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
-      "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
-      "However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.",
-    ],
-    learnings: [
-      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
-      "Sharpened my backend skills, specifically in optimizing database queries, improving performance, and handling server-side logic.",
-      `Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app's data is organized & easily accessible while keeping it secure.`,
-      `Acquired proficiency in NextJS and implemented various features utilizing industry-standard best practices.`,
-    ],
-    cardImage: morentCardImage,
-  },
-  {
-    id: 2,
-    name: "Jobit",
-    slug: "jobit",
-    title: "Jobit - A Modern Job Board",
-    type: "Web2",
-    about:
-      "A web application where users can share and discover artificial intelligence prompts from ChatGPT. I created it using Next.js - and used Next-Auth for user login, MongoDB for the database and Next.js's serverless backend.",
-    tech: "#Next.js #Next-Auth #MongoDB #Tailwind",
-    url: "https://ai-prompt-share-three.vercel.app/",
-    github: "https://github.com/hayleyiscoding/ai-prompt-share",
-    image: jobit,
-    cardImage: jobitCardImage,
-    imageProjectDetails: jobitLaptop,
-    myRole: "Software Engineer",
-    startDate: "06/08/2023",
-    endDate: "05/09/2023",
-    techStack: [reactjs, typescript, redux, tailwind, nodejs, express, mongodb],
-    longDescription: (
-      <>
-        Morent, a cutting-edge car rental application that was developed using
-        the MERN stack. The app boasts a dynamic homepage that showcases
-        featured vehicles, along with convenient pickup & drop-off location
-        options & a comprehensive list of available cars. <br />
-        <br />
-        My team and I also developed the car listing page which offers a search
-        bar and various filtering options for users to find the perfect vehicle.
-        Additionally, it has a car details page which provides users with
-        detailed information along with suggestions for other recommended
-        vehicles.
-        <br />
-        <br />
-        Car owners are also able to list their cars for rent through our Add Car
-        page, while users can easily track their rented and rented-out cars
-        through their profile page. Overall, we&apos;ve created an intuitive and
-        user-friendly MVP version of the platform that will make renting a car a
-        breeze.
-      </>
-    ),
-    secondImage: morentCars,
-    figmaDesign: jobitCardImage,
-    challenges: [
-      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
-      "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
-      "However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.",
-    ],
-    learnings: [
-      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
-      "Sharpened my backend skills, specifically in optimizing database queries, improving performance, and handling server-side logic.",
-      `Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app's data is organized & easily accessible while keeping it secure.`,
-      `Acquired proficiency in NextJS and implemented various features utilizing industry-standard best practices.`,
-    ],
-    cardImage: morentCardImage,
-  },
-
-  {
-    id: 3,
-    name: "AI Prompt Share",
-    slug: "ai-prompt-share",
-    title: "AIPrompt - An AI Prompt-Sharing Website",
-    type: "Web2",
-    about:
-      "A web application where users can share and discover artificial intelligence prompts from ChatGPT. I created it using Next.js - and used Next-Auth for user login, MongoDB for the database and Next.js's serverless backend ",
-    tech: "#Next.js #Next-Auth #MongoDB #Tailwind",
-    url: "https://ai-prompt-share-three.vercel.app/",
-    github: "https://github.com/hayleyiscoding/ai-prompt-share",
-    image: aiChat,
-    imageProjectDetails: morentLaptop,
-    myRole: "Software Engineer",
-    startDate: "06/08/2023",
-    endDate: "05/09/2023",
-    techStack: [reactjs, typescript, redux, tailwind, nodejs, express, mongodb],
-    longDescription: (
-      <>
-        Morent, a cutting-edge car rental application that was developed using
-        the MERN stack. The app boasts a dynamic homepage that showcases
-        featured vehicles, along with convenient pickup & drop-off location
-        options & a comprehensive list of available cars. <br />
-        <br />
-        My team and I also developed the car listing page which offers a search
-        bar and various filtering options for users to find the perfect vehicle.
-        Additionally, it has a car details page which provides users with
-        detailed information along with suggestions for other recommended
-        vehicles.
-        <br />
-        <br />
-        Car owners are also able to list their cars for rent through our Add Car
-        page, while users can easily track their rented and rented-out cars
-        through their profile page. Overall, we&apos;ve created an intuitive and
-        user-friendly MVP version of the platform that will make renting a car a
-        breeze.
-      </>
-    ),
-    secondImage: morentCars,
-    figmaDesign: morentFigma,
-    challenges: [
-      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
-      "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
-      "However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.",
-    ],
-    learnings: [
-      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
-      "Sharpened my backend skills, specifically in optimizing database queries, improving performance, and handling server-side logic.",
-      `Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app's data is organized & easily accessible while keeping it secure.`,
-      `Acquired proficiency in NextJS and implemented various features utilizing industry-standard best practices.`,
-    ],
-    cardImage: morentCardImage,
-  },
-  {
-    id: 4,
-    name: "Crowdfunding dApp",
-    slug: "crypto-revolution",
-    title: "The Crypo Crowfunding Revolution",
-    type: "Web3",
-    about:
-      "My team and I built this decentralised app as our final project for the Encode Solidity Bootcamp. It is an app that is similar to Kickstart or GoFundMe - except that users can make and receive donations in cryptocurrencies.",
-    tech: "#React #Solidity #Ethers #Hardhat #Thirdweb",
-    url: "https://crowdfunding-tau-three.vercel.app/",
-    github: "https://github.com/hayleyiscoding/crowdfunding-blockchain-app",
-    image: crowdfunding,
-    imageProjectDetails: morentLaptop,
-    myRole: "Software Engineer",
-    startDate: "06/08/2023",
-    endDate: "05/09/2023",
-    techStack: [reactjs, typescript, redux, tailwind, nodejs, express, mongodb],
-    longDescription: (
-      <>
-        Morent, a cutting-edge car rental application that was developed using
-        the MERN stack. The app boasts a dynamic homepage that showcases
-        featured vehicles, along with convenient pickup & drop-off location
-        options & a comprehensive list of available cars. <br />
-        <br />
-        My team and I also developed the car listing page which offers a search
-        bar and various filtering options for users to find the perfect vehicle.
-        Additionally, it has a car details page which provides users with
-        detailed information along with suggestions for other recommended
-        vehicles.
-        <br />
-        <br />
-        Car owners are also able to list their cars for rent through our Add Car
-        page, while users can easily track their rented and rented-out cars
-        through their profile page. Overall, we&apos;ve created an intuitive and
-        user-friendly MVP version of the platform that will make renting a car a
-        breeze.
-      </>
-    ),
-    problemStatement: `One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals.`,
-    secondImage: morentCars,
-    figmaDesign: morentFigma,
-    challenges: [
-      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
-      "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
-      "However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.",
-    ],
-    learnings: [
-      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
-      "Sharpened my backend skills, specifically in optimizing database queries, improving performance, and handling server-side logic.",
-      `Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app's data is organized & easily accessible while keeping it secure.`,
-      `Acquired proficiency in NextJS and implemented various features utilizing industry-standard best practices.`,
-    ],
-    cardImage: morentCardImage,
-  },
-
-  {
-    id: 5,
-    name: "BubbleBlowers Swim School",
-    slug: "bubble-blowers",
-    title: "Bubble Blowers Swim School Website",
-    type: "Web2",
-    about:
-      "A one-page website that I created for a freelance client who runs a swim school. It includes connection to WhatsApp, Google Reviews and Google Maps. The client reported a large increase in student sign-ups after the website launch.",
-    tech: "#HTML #CSS #Javascript",
-    url: "https://bubbleblowers.fun",
-    github: "https://github.com/hayleyiscoding/bubbleblowers",
-    image: bubbleBlowers,
-    imageProjectDetails: morentLaptop,
-    myRole: "Software Engineer",
-    startDate: "06/08/2023",
-    endDate: "05/09/2023",
-    techStack: [reactjs, typescript, redux, tailwind, nodejs, express, mongodb],
-    longDescription: (
-      <>
-        Morent, a cutting-edge car rental application that was developed using
-        the MERN stack. The app boasts a dynamic homepage that showcases
-        featured vehicles, along with convenient pickup & drop-off location
-        options & a comprehensive list of available cars. <br />
-        <br />
-        My team and I also developed the car listing page which offers a search
-        bar and various filtering options for users to find the perfect vehicle.
-        Additionally, it has a car details page which provides users with
-        detailed information along with suggestions for other recommended
-        vehicles.
-        <br />
-        <br />
-        Car owners are also able to list their cars for rent through our Add Car
-        page, while users can easily track their rented and rented-out cars
-        through their profile page. Overall, we&apos;ve created an intuitive and
-        user-friendly MVP version of the platform that will make renting a car a
-        breeze.
-      </>
-    ),
-    problemStatement: `One of the main problems that people face when looking to rent a car is the hassle of finding a
-    reliable and user-friendly platform to search for and book rental cars.
-    In addition, car owners who want to rent out their vehicles often
-    struggle to find a suitable platform to list their cars and manage their
-    rentals.`,
-    secondImage: morentCars,
-    figmaDesign: morentFigma,
-    challenges: [
-      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
-      "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
-      "However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.",
-    ],
-    learnings: [
-      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
-      "Sharpened my backend skills, specifically in optimizing database queries, improving performance, and handling server-side logic.",
-      `Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app's data is organized & easily accessible while keeping it secure.`,
-      `Acquired proficiency in NextJS and implemented various features utilizing industry-standard best practices.`,
-    ],
-    cardImage: morentCardImage,
-  },
-];
-
 export const publications = [
   {
     id: 1,
@@ -666,14 +382,6 @@ export const educationData = [
 ];
 
 export const workData = [
-  // {
-  //   id: 1,
-  //   type: "Work",
-  //   date: `Jan 2005 - June 2016`,
-  //   title: "English Instructor, Amazon Rainforest Naturalist Guide and Travels",
-  //   place: "Ecuador, Peru, South Korea, etc",
-  //   body: `I decided after my degree that my next 'education' was to travel the world. In order to do this, I worked various expat jobs, such as guiding in the Amazon Rainforest and teaching English in South Korea. With this income, I was able to visit 7 continents, live on 6 of them and visit over 40 countries. I learned so much about the world - the problems that people are experiencing, technological advancements in various countries and especially important soft skills such as how to effectively communicate with people from other cultures.`,
-  // },
   {
     id: 1,
     duration: "6 Months",
@@ -1081,53 +789,3 @@ export const headers = [
     phrase3: "Website",
   },
 ];
-
-// {
-//   id: 5,
-//   name: "The Online CoWork Lottery",
-//   type: "Web3",
-//   about:
-//     "I was given funding to build a blockchain start-up as part of the 3-month Women Build Web3 / Encode Club Accelerator program. I created a 'coworking lottery' for women who work online to raise funding for their online businesses. I presented this project on Dec 22nd, 2022.",
-//   tech: "#Nextjs #Solidity #Hardhat #Ethers #AirtableAPI",
-//   url: "https://kiddo-online-cowork-front-end.vercel.app/",
-//   github: "https://github.com/hayleyiscoding/online-cowork-front-end",
-//   image: onlineCoWorkLottery,
-// },
-
-// {
-//   id: 4,
-//   name: "Jobit",
-//   slug: "ai-prompt-share",
-//   title: "AIPrompt - An AI Prompt-Sharing Website",
-//   type: "Web2",
-//   about:
-//     "A web application where users can share and discover artificial intelligence prompts from ChatGPT. I created it using Next.js - and used Next-Auth for user login, MongoDB for the database and Next.js's serverless backend ",
-//   tech: "#Next.js #Next-Auth #MongoDB #Tailwind",
-//   url: "https://ai-prompt-share-three.vercel.app/",
-//   github: "https://github.com/hayleyiscoding/ai-prompt-share",
-//   image: jobit,
-//   cardImage: jobitCardImage,
-// },
-
-// {
-//   id: 6,
-//   name: "E-Commerce App",
-//   type: "Web2",
-//   about:
-//     "The front-end of an online clothing store that I created to practice React hooks and logic. Users can add their item/s to the cart (which pops out as a sidebar), sort the items by one size or multiple sizes, and flip the images to see the back and front views of the clothing.",
-//   tech: "#React",
-//   url: "https://react-shopping-cart-azure.vercel.app/",
-//   github: "https://github.com/hayleyiscoding/react-shopping-cart",
-//   image: ecommerce,
-// },
-// {
-//   id: 7,
-//   name: "Coding Gravity Animation",
-//   type: "Web2",
-//   about:
-//     "A fun animation that I created during my Javascript studies. In this animation, balls fall from the top of the viewport and bounce at the bottom of the viewport as if they are responding to gravity. I used the HTML Canvas element.",
-//   tech: "#Javascript #HTMLCanvas",
-//   url: "https://coding-gravity.vercel.app/",
-//   github: "https://github.com/hayleyiscoding/coding-gravity",
-//   image: gravity,
-// },
