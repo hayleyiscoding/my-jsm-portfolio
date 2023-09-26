@@ -73,13 +73,6 @@ const projects = {
       ],
       validation: (Rule: Rule) => Rule.required(),
     },
-    // {
-    //   name: "tech",
-    //   title: "Tech",
-    //   type: "array",
-    //   of: [{ type: "string", validation: (rule: Rule) => rule.required() }],
-    //   validation: (rule: Rule) => rule.required().min(1),
-    // },
   ],
 };
 

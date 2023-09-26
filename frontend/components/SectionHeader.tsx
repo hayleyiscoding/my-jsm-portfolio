@@ -10,12 +10,10 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   phrase3,
 }) => {
   return (
-    <h2 className='text-white mt-4 text-3xl font-extralight dark:text-white md:mt-4 md:text-5xl lg:mb-16'>
+    <h2 className='sectionHeader'>
       <span className='max-w-lg font-semibold leading-relaxed'>
         {phrase1}
-        <span className='decoration-custom-red kipInk font-semibold leading-relaxed underline decoration-8 underline-offset-1'>
-          {phrase2}
-        </span>
+        <span className='headerUnderline'>{phrase2}</span>
         {phrase3}
       </span>
       <br className='block sm:hidden' />

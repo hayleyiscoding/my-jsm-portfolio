@@ -8,7 +8,6 @@ import SectionHeader from "./SectionHeader";
 const serviceId = process.env.SERVICE_ID;
 const templateId = process.env.TEMPLATE_ID;
 const publicKey = process.env.PUBLIC_KEY;
-console.log(publicKey);
 
 const ContactForm = () => {
   const [hasEmailSent, setHasEmailSent] = useState(false);
@@ -52,17 +51,18 @@ const ContactForm = () => {
   return (
     <section id='contact' className='relative mt-6 h-auto'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        <div className='mx-auto mb-8 max-w-2xl text-center'>
+        {/* Header */}
+        <header className='mx-auto mb-8 max-w-2xl text-center'>
           <div className='mb-8 mt-6 pt-0 text-center md:mb-2'>
             <SectionHeader phrase1={`Get in `} phrase2={"Touch"} phrase3='!' />
           </div>
-          <p className='md:text-md text-white mx-auto max-w-xl px-5 text-center text-sm font-light leading-6 text-opacity-70 dark:text-white lg:-mt-6'>
+          <p className='contactSubheader'>
             I&apos;d love to hear from you! If you have any questions, comments
             or feedback, please use the form below, or contact me on LinkedIn
             where I am most active. My email address is hayleyiscoding (@)
             gmail.com. Thanks!
           </p>
-        </div>
+        </header>
 
         <div className='mx-auto max-w-2xl overflow-hidden rounded-xl'>
           <div className='px-6'>
@@ -71,7 +71,8 @@ const ContactForm = () => {
               onSubmit={sendEmail}
               className='dark:bg-custom-black mt-2 p-2'
             >
-              <div className='grid grid-cols-1 gap-x-4 gap-y-1 sm:grid-cols-2'>
+              {/* Name Input */}
+              <div className='contactFormGrid'>
                 <div>
                   <label
                     htmlFor='from_name'
@@ -85,11 +86,12 @@ const ContactForm = () => {
                       name='from_name'
                       id='from_name'
                       placeholder='Enter your name'
-                      className='border-b-custom-red mb-6 block w-full rounded-md border-b bg-custom-red p-4 text-white caret-white transition-all duration-200 placeholder:text-white dark:focus:border-custom-red  focus:border-white focus:outline-none dark:bg-black md:mb-0 custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed'
+                      className='nameInput'
                     />
                   </div>
                 </div>
 
+                {/* Email Input */}
                 <div>
                   <label
                     htmlFor='user-email'
@@ -103,11 +105,12 @@ const ContactForm = () => {
                       name='user-email'
                       id='user-email'
                       placeholder='Enter your email address'
-                      className='border-b-custom-red block w-full rounded-md border-b bg-custom-red p-4 text-white caret-white transition-all duration-200 placeholder:text-white dark:focus:border-custom-red focus:border-white focus:outline-none dark:bg-black custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed'
+                      className='emailInput'
                     />
                   </div>
                 </div>
 
+                {/* Message Input */}
                 <div className='mt-5 sm:col-span-2'>
                   <label
                     htmlFor='message'
@@ -120,7 +123,7 @@ const ContactForm = () => {
                       name='message'
                       id='message'
                       placeholder='Write your message'
-                      className='border-b-custom-red mt-[20px] block w-full resize-y rounded-md border-b p-4 font-light text-white caret-white transition-all duration-200 placeholder:text-white dark:focus:border-custom-red focus:outline-none dark:bg-black bg-custom-red custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed focus:border-white'
+                      className='contactTextArea'
                       rows={4}
                       maxLength={500}
                     ></textarea>
@@ -131,7 +134,7 @@ const ContactForm = () => {
                 {isError ? (
                   <div className='bg-custom-black h-24'>
                     <div className='flex h-full w-full items-end justify-end px-4 py-5 sm:p-6'>
-                      <div className='bg-custom-red w-full max-w-sm overflow-hidden rounded-lg border border-white shadow-lg'>
+                      <div className='bg-custom-teal w-full max-w-sm overflow-hidden rounded-lg border border-white shadow-lg'>
                         <div className='p-3'>
                           <div className='flex items-center justify-between'>
                             <svg
@@ -161,11 +164,7 @@ const ContactForm = () => {
                 )}
 
                 <div className='mb-32 sm:col-span-2'>
-                  <button
-                    type='submit'
-                    value='Send'
-                    className='text-md dark:bg-custom-red bg-custom-red absolute mt-8 inline-flex cursor-pointer items-center justify-center rounded-md custom-neumorphic-teal dark:custom-neumorphic-process hover:dark:custom-neumorphic-black-pressed px-10 py-3 font-light leading-5 text-white dark:text-custom-red shadow-xl transition-all duration-200 hover:text-white hover:custom-neumorphic-teal-pressed focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
-                  >
+                  <button type='submit' value='Send' className='submitButton'>
                     Send
                     <svg
                       className={`${

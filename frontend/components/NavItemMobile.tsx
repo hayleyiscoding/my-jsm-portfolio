@@ -17,11 +17,7 @@ const NavItemMobile: React.FC<NavItemMobileProps> = ({
 
   return (
     <li>
-      <Link
-        href={url}
-        onClick={closeSidebar}
-        className='text-white mx-auto flex flex-col items-center rounded-xl pb-4 dark:text-white hover:underline'
-      >
+      <Link href={url} onClick={closeSidebar} className='navItemMobile'>
         {name}
       </Link>
     </li>

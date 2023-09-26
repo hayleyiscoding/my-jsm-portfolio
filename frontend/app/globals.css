@@ -33,22 +33,25 @@
   input {
     @apply text-[white] text-base font-thin tracking-[0.009375em] self-end box-border w-full transition-opacity ease-in-out dark:bg-custom-black bg-white h-16 mt-6 pt-[35px] pb-10 px-4 rounded-[4px_4px_0_0] border-b-[3px] border-b-[#008e97] border-[none] border-solid shadow-xl;
   }
+
   input:focus {
     @apply border border-solid border-[#008e97];
   }
+
   input::placeholder {
     @apply font-extralight text-base pt-4;
   }
 
   /* Custom SuperScript */
   .custom-superscript {
-    @apply text-[0.5em] leading-[0.3em] align-baseline relative top-[-0.50em];
+    @apply text-[0.4em] leading-[0.3em] align-baseline relative top-[-1em];
   }
 
   /* Custom Zoom */
   .custom-zoom {
     @apply transition-transform duration-100;
   }
+
   .custom-zoom:hover {
     @apply scale-105;
   }
@@ -57,87 +60,60 @@
   .custom-neumorphic-tech {
     @apply shadow-[inset_0.3px_0.3px_1px_#191a21,inset_-0.3px_-0.3px_1px_#191a21] rounded-[15%] bg-gradient-to-tl from-[#1f2029] to-[#131419];
   }
+
   .custom-neumorphic-table {
     @apply shadow-[inset_6px_6px_12px_#9d9191,inset_-6px_-6px_12px_#f5e3e3] rounded-2xl bg-[#008e97];
     background: hsl(0%, 100%, 50);
   }
+
   .custom-neumorphic-publications {
     @apply shadow-[inset_6px_6px_12px_#9d9191,inset_-6px_-6px_12px_#f5e3e3] rounded-2xl bg-[#c9baba];
   }
-  .custom-neumorphic-nav {
-    @apply shadow-[5px_5px_0px_#0c0c10,-5px_-5px_0px_#262832] rounded-[64px] bg-custom-black;
-  }
+
+  /* Black */
   .custom-neumorphic-process {
+    @apply shadow-[6px_6px_12px_#0a0b0e,-6px_-6px_12px_#282934];
     background: linear-gradient(145deg, #17171e, #1b1c23);
-    box-shadow:
-      6px 6px 12px #0a0b0e,
-      -6px -6px 12px #282934;
   }
   .custom-neumorphic-skills {
-    border-radius: 50%;
+    @apply shadow-[5px_5px_10px_#131419,-5px_-5px_10px_#1f2129] rounded-[50%];
     background: linear-gradient(145deg, #17171e, #1b1c23);
-    box-shadow:
-      5px 5px 10px #131419,
-      -5px -5px 10px #1f2129;
   }
   .custom-neumorphic-projects {
-    border-radius: 10px;
+    @apply shadow-[5px_5px_10px_#131419,-5px_-5px_10px_#1f2129] rounded-[10px];
     background: linear-gradient(145deg, #17171e, #1b1c23);
-    box-shadow:
-      5px 5px 10px #131419,
-      -5px -5px 10px #1f2129;
   }
-  .custom-neumorphic-teal {
-    background: linear-gradient(145deg, #008088, #0098a2);
-    box-shadow:
-      5px 5px 10px #006b71,
-      -5px -5px 10px #00b2bd;
-  }
-
-  .custom-neumorphic-teal-pressed {
-    box-shadow:
-      inset 5px 5px 10px #004e53,
-      inset -5px -5px 10px #00cedb;
-  }
-
-  .custom-neumorphic-teal-no-blur {
-    border-radius: 93px;
-    background: #008e97;
-    box-shadow:
-      5px 5px 0px #00747c,
-      -5px -5px 0px #00a8b2;
-  }
-
   .custom-neumorphic-strengths {
-    border-radius: 24px;
+    @apply shadow-[5px_5px_10px_#0c0c10,-5px_-5px_10px_#262832] rounded-3xl;
     background: linear-gradient(145deg, #1b1c23, #17171e);
-    box-shadow:
-      5px 5px 10px #0c0c10,
-      -5px -5px 10px #262832;
   }
 
+  /* Teal */
+  .custom-neumorphic-teal {
+    @apply shadow-[5px_5px_10px_#006b71,-5px_-5px_10px_#00b2bd];
+    background: linear-gradient(145deg, #008088, #0098a2);
+  }
+
+  /* White */
   .custom-neumorphic-white {
+    @apply shadow-[6px_6px_14px_#dbdbdb,-6px_-6px_14px_#ffffff];
     background: #ffffff;
     -webkit-box-shadow:
       6px 6px 14px #dbdbdb,
       -6px -6px 14px #ffffff;
-    box-shadow:
-      6px 6px 14px #dbdbdb,
-      -6px -6px 14px #ffffff;
   }
 
+  /* Black, Teal, White - Pressed */
+  .custom-neumorphic-teal-pressed {
+    @apply shadow-[inset_5px_5px_10px_#004e53,inset_-5px_-5px_10px_#00cedb];
+  }
   .custom-neumorphic-black-pressed {
+    @apply shadow-[inset_5px_5px_10px_#0d0e11,inset_-5px_-5px_10px_#252631];
     background: #191a21;
-    box-shadow:
-      inset 5px 5px 10px #0d0e11,
-      inset -5px -5px 10px #252631;
   }
-
   .custom-neumorphic-white-pressed {
+    @apply shadow-[inset_5px_5px_10px_#e3e3e3,inset_-5px_-5px_10px_#ffffff];
     background: #ffffff;
-    box-shadow:
-      inset 5px 5px 10px #e3e3e3,
-      inset -5px -5px 10px #ffffff;
   }
 
   /* Custom Card Tilt */
@@ -145,25 +121,26 @@
     @apply -mt-10;
     transform: rotateZ(25deg);
   }
+
   .custom-card-tilt2 {
     @apply mt-[210px];
     transform: rotateZ(35deg);
   }
 
   /* Custom Red Box Shadow */
-  .custom-red-box-shadow {
+  .custom-teal-box-shadow {
     @apply shadow-[10px_10px_0px_-7px_rgba(255,0,0,0.88)];
   }
 
   /* Custom Box Shadow */
   .custom-text-shadow {
-    @apply shadow-[0_0_0.8px_#008e97,0_0_1.6px_#008e97,0_0_4px_#008e97,0_0_4.8px_#008e97] p-1 pr-2  ml-2;
+    @apply shadow-[0_0_0.8px_#008e97,0_0_1.6px_#008e97,0_0_4px_#008e97,0_0_4.8px_#008e97] p-1 rounded-lg;
   }
 
   /* Custom Animated Active Link on Hover */
   .highlights {
-    --s: 0.2em; /* the thickness of the line */
-    --c: #008e97; /* the color */
+    --s: 0.2em; /* thickness */
+    --c: #008e97; /* color */
     color: white;
     padding-bottom: var(--s);
     background:
@@ -174,19 +151,56 @@
     background-clip: text, padding-box;
     transition: 0.5s;
   }
+
   .highlights:hover {
     --_p: 100%;
+  }
+
+  /* Slow Bounce Animation */
+  .animate-bounce-slow {
+    animation-name: bounce-slow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounce-slow {
+    0%,
+    100% {
+      transform: translateY(-25%);
+      animation-timing-function: ease-in;
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+  }
+
+  /* About Card Animation */
+  @keyframes open {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  details[open] summary ~ * {
+    animation: open 0.5s ease-in-out;
   }
 }
 
 @layer components {
   /* Navbar */
+
   .logoName {
-    @apply text-white dark:text-custom-red self-center text-xs sm:text-sm font-medium tracking-wide dark:font-medium lg:text-lg;
+    @apply text-white dark:text-custom-teal self-center text-xs sm:text-sm font-medium tracking-wide dark:font-medium lg:text-lg;
   }
 
   .logo {
-    @apply dark:bg-custom-red bg-white mx-3 h-8 p-1 dark:text-white text-custom-red md:ml-2;
+    @apply dark:bg-custom-teal bg-white mx-3 h-8 p-1 dark:text-white text-custom-teal md:ml-2;
   }
 
   .navDesktop {
@@ -194,7 +208,7 @@
   }
 
   .resumeButtonDesktop {
-    @apply text-white hover:text-white flex cursor-pointer items-center justify-center rounded-xl px-5 py-3 text-[15px] font-light leading-[4px] dark:font-medium custom-neumorphic-teal-pressed dark:hover:text-custom-red dark:hover:bg-custom-black dark:hover:custom-neumorphic-projects bg-custom-red;
+    @apply text-white hover:text-white flex cursor-pointer items-center justify-center rounded-xl px-5 py-3 text-[15px] font-light leading-[4px] dark:font-medium custom-neumorphic-teal-pressed dark:hover:text-custom-teal dark:hover:bg-custom-black dark:hover:custom-neumorphic-projects bg-custom-teal;
   }
 
   .buttonMobile {
@@ -202,10 +216,240 @@
   }
 
   .resumeButtonMobile {
-    @apply flex cursor-pointer justify-center px-3 py-2 pb-4 text-[17px] font-medium hover:underline dark:border-white text-white dark:text-custom-red;
+    @apply flex cursor-pointer justify-center px-3 py-2 pb-4 text-[17px] font-medium hover:underline dark:border-white text-white dark:text-custom-teal;
+  }
+
+  /* Nav Item */
+
+  .navItemLink {
+    @apply font-normal dark:highlights dark:decoration-custom-teal dark:hover:no-underline hover:underline decoration-[2px] underline-offset-[4px] rounded-xl p-2 text-sm dark:text-white;
+  }
+
+  .navActive {
+    @apply decoration-white underline decoration-[2px] underline-offset-[4px];
+  }
+
+  /* Nav Item Mobile */
+
+  .navItemMobile {
+    @apply text-white mx-auto flex flex-col items-center rounded-xl pb-4 dark:text-white hover:underline;
+  }
+
+  /* Section Header */
+
+  .sectionHeader {
+    @apply text-white mt-4 text-4xl font-extralight dark:text-white md:mt-4 md:text-5xl lg:mb-16;
+  }
+
+  .headerUnderline {
+    @apply decoration-custom-teal skipInk font-semibold leading-relaxed underline decoration-8 underline-offset-1;
+  }
+
+  /* Hero */
+
+  .heroGrid {
+    @apply ml-2 grid grid-cols-1 place-items-center items-center lg:ml-12 lg:grid-cols-2;
+  }
+
+  .jobTitle {
+    @apply text-white dark:text-custom-teal mb-6 text-xl font-medium text-opacity-90 dark:font-normal md:text-2xl lg:-mt-16;
+  }
+
+  .heroAbout {
+    @apply text-sm text-white mx-auto mt-3 max-w-2xl font-light leading-relaxed  dark:font-extralight dark:text-white md:mt-8;
+  }
+
+  .heroResumeButton {
+    @apply custom-neumorphic-teal dark:custom-neumorphic-teal hover:custom-neumorphic-teal-pressed dark:hover:custom-neumorphic-teal-pressed text-sm flex cursor-pointer items-center justify-center rounded-lg px-6 py-[15px] font-medium leading-5 text-white dark:text-white transition-all duration-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2  dark:border-custom-teal lg:w-auto bg-black;
+  }
+
+  .heroEmail {
+    @apply flex-1 text-custom-teal text-sm ml-0 flex w-full cursor-pointer items-center justify-center md:rounded-r-xl dark:rounded-none dark:md:rounded-xl py-[14px]  bg-white custom-neumorphic-white-pressed px-6 pl-10 font-medium leading-5 transition-all duration-200 dark:border-white dark:custom-neumorphic-black-pressed lg:w-auto rounded-xl mt-3 md:mt-0 dark:md:mt-0 dark:mt-1;
+  }
+
+  /* Hero Image */
+
+  .blob {
+    @apply fancy-border-radius bg-custom-teal custom-neumorphic-teal-pressed absolute -top-12 md:-top-3 lg:-top-5 -left-2 h-[340px] w-[240px] md:h-[340px] md:w-[240px] lg:h-[490px] lg:w-[320px] rotate-45 mt-10 md:mt-0;
+  }
+
+  .heroPhoto {
+    @apply fancy-border-radius relative text-white md:mx-auto p-2 w-[14rem] lg:w-[19rem] 2xl:origin-bottom transition grayscale-30;
+  }
+
+  /* About */
+
+  .aboutGrid {
+    @apply grid grid-cols-1 gap-6 px-4 sm:grid-cols-3 sm:px-0 xl:grid-cols-5;
+  }
+
+  .aboutContainer {
+    @apply md:mt-10 w-full rounded-2xl py-0 lg:py-7 px-6 lg:px-24;
+  }
+
+  /* About Card */
+
+  .summary {
+    @apply dark:custom-neumorphic-process -ml-1 mb-4 flex flex-col items-center justify-center gap-2 rounded-2xl bg-white p-4 text-center shadow-xl;
+  }
+
+  /* Skill Section */
+
+  .skillSectionContainer {
+    @apply flex flex-col items-center justify-center p-2;
+  }
+
+  .skillSectionHeader {
+    @apply text-white text-center text-xl font-medium dark:text-white mb-6;
+  }
+
+  .skillSectionList {
+    @apply flex flex-wrap items-center justify-center gap-4 py-6;
+  }
+
+  /* Skill Icons */
+
+  .skillIconListItem {
+    @apply dark:custom-neumorphic-process hover:custom-neumorphic-teal-pressed custom-neumorphic-teal dark:hover:custom-neumorphic-black-pressed mx-auto mb-5 flex h-[110px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[100%] p-2 shadow-2xl;
+  }
+
+  .skillIconImage {
+    @apply w-[50px] p-2 lg:w-[60px] dark:contrast-100 contrast-200;
+  }
+
+  .skillIconName {
+    @apply text-white mt-1 flex items-center justify-center text-xs dark:text-white;
+  }
+
+  /* Skills Other */
+
+  .skillsOtherContainer {
+    @apply custom-neumorphic-teal dark:custom-neumorphic-teal-pressed bg-custom-teal my-12 flex w-full flex-col justify-start rounded-xl px-8 dark:border-4 dark:border-white;
+  }
+
+  .skillsOtherIconsListItem {
+    @apply custom-neumorphic-teal hover:custom-neumorphic-teal-pressed mx-auto mb-7 flex h-[120px] w-[120px] cursor-pointer flex-col items-center justify-center rounded-[100%] p-4;
+  }
+
+  .skillsOtherImage {
+    @apply w-full max-w-[40px] brightness-100 contrast-200 grayscale;
+  }
+
+  /* Work Experience */
+
+  .workExpContainer {
+    @apply dark:bg-custom-black mx-auto mb-12 lg:mt-10 justify-around rounded-xl bg-custom-teal px-2 lg:px-8 lg:pt-12 lg:flex;
+  }
+
+  .workExpCol2 {
+    @apply dark:custom-neumorphic-process custom-neumorphic-teal w-full rounded-xl mt-10 px-6 p-5 lg:w-[50%] lg:pl-12;
+  }
+
+  .workExpList {
+    @apply border-white dark:border-custom-teal relative mx-auto mt-12 border-l-4 md:mt-14;
+  }
+
+  .workExpCircle {
+    @apply dark:bg-black bg-black dark:border-custom-teal border-white absolute -left-3 flex h-5 w-5 animate-spin items-center justify-center rounded-full text-white;
+  }
+
+  .workExpType {
+    @apply dark:text-custom-teal -mt-5 mb-1 text-sm font-normal leading-none text-white opacity-70;
+  }
+
+  .workExpDuration {
+    @apply custom-superscript custom-neumorphic-teal p-1 pr-2 ml-2 dark:custom-neumorphic-skills dark:border-custom-teal rounded-xl font-bold dark:border-2 text-white;
+  }
+
+  .workExpPlace {
+    @apply mb-4 text-sm font-normal text-white dark:text-gray-400 opacity-70;
+  }
+
+  /* Testimonial Data */
+
+  .testimonialAvatar {
+    @apply grayscale-30 mx-auto h-[100px] w-[100px] rounded-[100%] object-cover p-[7px];
+  }
+
+  .testimonialQuoteContainer {
+    @apply custom-neumorphic-teal-pressed mt-3 rounded-md px-4 py-6 opacity-80 sm:mt-8 md:px-10;
+  }
+
+  .testomonialQuote {
+    @apply md:text-base text-sm font-light leading-6 text-white px-10 lg:px-4;
+  }
+
+  /* Testimonials - Swiper.js */
+
+  .sliderContainer {
+    @apply dark:bg-custom-black bg-custom-teal mx-auto mb-20 py-5 pb-10 lg:mt-12;
+  }
+
+  .mySwiper {
+    @apply mx-16 !important;
+  }
+
+  .mySwiper .swiper-slide {
+    @apply shadow-2xl bg-custom-teal rounded-xl bg-center bg-cover w-[400px] md:w-[500px] lg:w-[400px] h-[500px] flex flex-col justify-center mb-4 !important;
+  }
+
+  .mySwiper .swiper-pagination-bullet {
+    @apply bg-gray-400 h-3 w-3 !important;
+  }
+
+  .mySwiper .swiper-pagination-bullets {
+    @apply md:-bottom-[0px] !important;
+  }
+
+  .mySwiper .swiper-pagination-bullet-active {
+    @apply dark:bg-custom-teal bg-white !important;
+  }
+
+  .mySwiper .swiper-wrapper {
+    @apply h-full py-10 !important;
+  }
+
+  /* Contact Block */
+  .contactBlockContainer {
+    @apply custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed border-custom-teal mx-8 lg:mx-24 flex flex-col items-center justify-between gap-6 rounded-xl p-8 lg:mb-0 lg:flex-row;
+  }
+
+  .contactBlockTitle {
+    @apply dark:text-custom-teal text-white pb-1 text-xl font-normal md:text-3xl lg:text-4xl;
+  }
+
+  .contactBlockButton {
+    @apply custom-neumorphic-teal hover:custom-neumorphic-teal-pressed dark:custom-neumorphic-process hover:dark:custom-neumorphic-black-pressed text-base w-full min-w-[200px] cursor-pointer flex-col flex-wrap items-center justify-center rounded-md px-6 py-5 font-normal leading-5 shadow-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-white dark:text-custom-teal md:flex md:text-lg;
+  }
+
+  /* Contact Form */
+
+  .contactSubheader {
+    @apply md:text-base text-white mx-auto max-w-xl px-5 text-center text-sm font-light leading-6 text-opacity-70 dark:text-white lg:-mt-6;
+  }
+
+  .emailInput {
+    @apply border-b-custom-teal block w-full rounded-md border-b bg-custom-teal p-4 text-white caret-white transition-all duration-200 placeholder:text-white dark:focus:border-custom-teal focus:border-white focus:outline-none dark:bg-black custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed mb-6;
+  }
+
+  .nameInput {
+    @apply border-b-custom-teal mb-6 block w-full rounded-md border-b bg-custom-teal p-4 text-white caret-white transition-all duration-200 placeholder:text-white dark:focus:border-custom-teal  focus:border-white focus:outline-none dark:bg-black md:mb-0 custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed;
+  }
+
+  .contactFormGrid {
+    @apply grid grid-cols-1 gap-x-4 gap-y-1 sm:grid-cols-2;
+  }
+
+  .submitButton {
+    @apply text-base dark:bg-custom-teal bg-custom-teal absolute mt-8 inline-flex cursor-pointer items-center justify-center rounded-md custom-neumorphic-teal dark:custom-neumorphic-process hover:dark:custom-neumorphic-black-pressed px-10 py-3 font-light leading-5 text-white dark:text-custom-teal shadow-xl transition-all duration-200 hover:text-white hover:custom-neumorphic-teal-pressed focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2;
+  }
+
+  .contactTextArea {
+    @apply border-b-custom-teal mt-[20px] block w-full resize-y rounded-md border-b p-4 font-light text-white caret-white transition-all duration-200 placeholder:text-white dark:focus:border-custom-teal focus:outline-none dark:bg-black bg-custom-teal custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed focus:border-white;
   }
 
   /* Footer */
+
   .footerSocialDiv {
     @apply flex items-center justify-center space-x-6 sm:order-2 sm:justify-end;
   }
@@ -218,109 +462,160 @@
     @apply text-white mt-6 text-center font-sans text-sm font-normal text-opacity-50 dark:text-white sm:order-1 sm:mt-0 sm:text-left;
   }
 
-  /* About Card */
-  .summary {
-    @apply dark:custom-neumorphic-process -ml-1 mb-4 flex flex-col items-center justify-center gap-2 rounded-2xl bg-white p-4 text-center shadow-xl;
-  }
-
   /* Back to Top */
+
   .backToTopButton {
-    @apply bg-custom-black dark:bg-custom-red fixed bottom-4 right-4 rounded-md px-4 py-2 text-white transition-opacity;
+    @apply bg-custom-black dark:bg-custom-teal fixed bottom-4 right-4 rounded-md px-4 py-2 text-white transition-opacity;
   }
 
-  /* Contact Block */
-  .contactBlockContainer {
-    @apply custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed border-custom-red mx-8 lg:mx-24 flex flex-col items-center justify-between gap-6 rounded-xl p-8 lg:mb-0 lg:flex-row;
+  /* Projects */
+
+  .projectsContainer {
+    @apply md:text-base mt-12 grid gap-x-6 gap-y-8 text-sm md:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 p-8 custom-neumorphic-teal-pressed bg-custom-teal;
   }
 
-  .contactBlockTitle {
-    @apply dark:text-custom-red text-white pb-1 text-2xl font-normal md:text-3xl lg:text-4xl;
+  .projectContainer {
+    @apply custom-neumorphic-teal mb-1 block rounded-lg dark:border-white lg:mb-0;
   }
 
-  .contactBlockButton {
-    @apply custom-neumorphic-teal hover:custom-neumorphic-teal-pressed dark:custom-neumorphic-process hover:dark:custom-neumorphic-black-pressed text-base w-full min-w-[200px] cursor-pointer flex-col flex-wrap items-center justify-center rounded-md px-6 py-5 font-normal leading-5 shadow-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-white dark:text-custom-red md:flex md:text-lg;
+  .projectImageContainer {
+    @apply md:custom-zoom relative m-4 overflow-hidden rounded-[10px] bg-cover bg-no-repeat;
   }
 
-  /* Hero */
-
-  .heroGrid {
-    @apply ml-2 grid grid-cols-1 place-items-center items-center lg:ml-12 lg:grid-cols-2;
+  .projectImage {
+    @apply w-full rounded-t-lg text-white;
   }
 
-  .jobTitle {
-    @apply text-white dark:text-custom-red mt-6 text-xl font-medium text-opacity-90 dark:font-normal md:text-2xl lg:-mt-16;
+  .projectImageLink {
+    @apply absolute inset-0 h-full w-full overflow-hidden bg-fixed shadow-2xl transition duration-300 ease-in-out;
   }
 
-  .heroAbout {
-    @apply text-sm text-white mx-auto mt-3 max-w-2xl font-light leading-relaxed  dark:font-extralight dark:text-white md:mt-8;
+  .projectTitle {
+    @apply border-b-white border-b-[80%] text-white mb-3 border-b pb-3 text-2xl font-bold dark:text-white;
   }
 
-  .heroResumeButton {
-    @apply custom-neumorphic-teal dark:custom-neumorphic-teal hover:custom-neumorphic-teal-pressed dark:hover:custom-neumorphic-teal-pressed text-sm flex cursor-pointer items-center justify-center rounded-lg px-6 py-[15px] font-medium leading-5 text-white dark:text-white transition-all duration-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2  dark:border-custom-red lg:w-auto bg-black;
+  .projectType {
+    @apply text-lg text-white mb-4 pb-2 font-extralight;
   }
 
-  .heroEmail {
-    @apply flex-1 text-custom-red text-sm ml-0 flex w-full cursor-pointer items-center justify-center md:rounded-r-xl dark:rounded-none dark:md:rounded-xl bg-white custom-neumorphic-white-pressed px-6 pl-10 font-medium leading-5 transition-all duration-200 dark:border-white dark:custom-neumorphic-black-pressed lg:w-auto rounded-xl mt-3 md:mt-0 dark:md:mt-0 dark:mt-1;
+  .projectButton {
+    @apply custom-neumorphic-teal hover:custom-neumorphic-teal-pressed mt-2 inline-flex cursor-pointer items-center justify-center rounded-xl p-3 px-5 text-sm font-normal leading-5 text-white shadow-xl transition-all duration-200 focus:ring-black dark:bg-black;
   }
 
-  /* Testimonials - Swiper.js */
+  /* Project Details */
+  .projectDetailsContainer {
+    @apply mx-auto flex flex-col items-center justify-between;
+  }
 
-  .mySwiper {
-    @apply mx-16 !important;
+  /* Project Details Header */
+  .projectDetailsWebDev {
+    @apply uppercase tracking-[0.5em] font-bold dark:text-custom-teal text-white mx-auto text-base my-2;
   }
-  .mySwiper .swiper-slide {
-    @apply shadow-2xl bg-custom-red rounded-xl bg-center bg-cover w-[400px] md:w-[500px] lg:w-[400px] h-[500px] flex flex-col justify-center mb-4 !important;
-  }
-  .mySwiper .swiper-pagination-bullet {
-    @apply bg-gray-400 h-3 w-3 !important;
-  }
-  .mySwiper .swiper-pagination-bullets {
-    @apply md:-bottom-[0px]  !important;
-  }
-  .mySwiper .swiper-pagination-bullet-active {
-    @apply dark:bg-custom-red bg-white !important;
-  }
-  .mySwiper .swiper-wrapper {
-    @apply h-full py-10 !important;
-  }
-}
 
-/* Contact Block */
-.contact-block {
-  background: url("/assets/geometryBlock.png") no-repeat center;
-  width: 100%;
-  border-radius: 20px !important;
-}
-
-@keyframes open {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
+  .laptopImage {
+    @apply object-cover max-w-[400px] md:max-w-[800px] px-6 mx-auto mt-8;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-details[open] summary ~ * {
-  animation: open 0.5s ease-in-out;
-}
-
-@keyframes bounce-slow {
-  0%,
-  100% {
-    transform: translateY(-25%);
-    animation-timing-function: ease-in;
+  .demoButton {
+    @apply mb-2 pb-2 text-white cursor-pointer inline-flex items-center justify-center px-8 py-1 mt-1 text-xl font-medium leading-5 transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black dark:hover:text-white dark:text-white dark:highlights hover:underline underline-offset-4 dark:hover:no-underline;
   }
-  50% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-}
 
-.animate-bounce-slow {
-  animation-name: bounce-slow;
-  animation-duration: 1s; /* Adjust the duration as needed */
-  animation-iteration-count: infinite;
+  .sourceButton {
+    @apply mb-2 pb-2 cursor-pointer inline-flex items-center justify-center px-1 py-1 mt-1 ml-0 md:ml-7 text-xl font-medium leading-5 transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black dark:hover:text-white dark:text-white dark:highlights text-white hover:underline underline-offset-4 dark:hover:no-underline;
+  }
+
+  /* Project Details Dates */
+  .datesContainer {
+    @apply max-w-4xl dark:bg-custom-teal my-8 mx-5 flex flex-col justify-between dark:rounded-2xl md:gap-5 md:px-10 text-center md:flex-row lg:text-left px-4 w-full py-4;
+  }
+
+  .datesSectionContainer {
+    @apply basis-1/3 text-center custom-neumorphic-teal mb-8 md:mb-0 p-6;
+  }
+
+  .datesSectionTitle {
+    @apply text-custom-black text-base font-bold;
+  }
+
+  /* Project Details Tech Stack */
+
+  .techStackContainer {
+    @apply dark:bg-custom-black bg-custom-teal w-full max-w-4xl rounded-xl px-10 py-8 dark:px-4 dark:py-6;
+  }
+
+  .techStackListItem {
+    @apply dark:custom-neumorphic-process dark:hover:custom-neumorphic-black-pressed custom-neumorphic-teal hover:custom-neumorphic-teal-pressed mx-auto flex h-[80px] w-[80px] cursor-pointer flex-col items-center justify-center rounded-[100%] bg-white p-3 shadow-2xl dark:border-none;
+  }
+
+  .techStackImage {
+    @apply w-[50px] p-2 lg:w-[60px] dark:contrast-100 contrast-200;
+  }
+
+  /* Project Description */
+
+  .projectDescription {
+    @apply text-white max-w-4xl px-4 py-5 font-extralight text-opacity-80 dark:text-white;
+  }
+
+  /* Problem Statement */
+
+  .problemContainer {
+    @apply max-w-4xl py-6 dark:px-1 dark:bg-custom-black rounded-2xl;
+  }
+
+  /* Project Figma Design */
+
+  .projectFigma {
+    @apply mt-8 rounded-md px-2 py-4 text-center text-3xl font-bold text-white mx-auto;
+  }
+
+  /* Project Details Process Icons */
+
+  .processIconsListItem {
+    @apply dark:custom-neumorphic-process dark:hover:custom-neumorphic-black-pressed mx-auto mb-5 flex h-[100px] w-[100px] lg:h-[150px] lg:w-[150px] flex-col items-center justify-center rounded-[100%] custom-neumorphic-teal hover:custom-neumorphic-teal-pressed p-8 lg:p-4 shadow-xl;
+  }
+
+  .processIconsName {
+    @apply text-white mt-3 flex items-center justify-center dark:text-white text-xs;
+  }
+
+  .processIconsList {
+    @apply flex flex-wrap items-center justify-start gap-4 py-2;
+  }
+
+  .processIconsImage {
+    @apply w-[20px] lg:w-[40px] brightness-100 contrast-200 grayscale;
+  }
+
+  /* Project Challenges and Learnings */
+
+  .challengesContainer {
+    @apply dark:custom-neumorphic-process custom-neumorphic-teal rounded-xl p-8;
+  }
+
+  /* Project Details More Cases */
+
+  .moreCasesContainer {
+    @apply mt-16 max-w-4xl border-t-2 border-t-gray-400 px-6 pb-10 pt-20 dark:border-t-white;
+  }
+
+  .moreCasesList {
+    @apply flex flex-col flex-wrap items-center justify-center gap-3 md:flex-row md:gap-8;
+  }
+
+  .moreCasesListItem {
+    @apply text-base dark:custom-neumorphic-process custom-neumorphic-teal flex-1 rounded-xl bg-white p-12 font-extralight mb-8;
+  }
+
+  .moreCasesProjectName {
+    @apply text-white dark:text-custom-teal mb-2 text-xl font-bold;
+  }
+
+  .moreCasesProjectText {
+    @apply mb-2 line-clamp-3 w-full font-light leading-7 text-white;
+  }
+
+  .moreCasesButton {
+    @apply dark:custom-neumorphic-process dark:hover:custom-neumorphic-black-pressed custom-neumorphic-teal hover:custom-neumorphic-teal-pressed my-5 block w-full cursor-pointer rounded-3xl py-3 text-center text-white dark:text-custom-teal hover:opacity-70 font-semibold;
+  }
 }

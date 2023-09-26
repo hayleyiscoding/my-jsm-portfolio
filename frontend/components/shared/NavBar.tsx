@@ -20,9 +20,9 @@ const Navbar = () => {
   return (
     <>
       {/* Main nav */}
-      <nav className='mx-8 lg:px-1'>
+      <nav className='container mx-auto lg:px-1'>
         <div className='navDesktop'>
-          {/* Hamburger icon - show only on mobile */}
+          {/* Show only on mobile */}
           <button
             onClick={() => setShowSidebar((prevState) => !prevState)}
             type='button'
@@ -30,13 +30,14 @@ const Navbar = () => {
           >
             <span className='sr-only'>Open sidebar</span>
             {!showSidebar ? (
+              // Hamburger Icon
               <div className='flex items-center justify-center md:justify-start'>
-                <AiOutlineMenu size={30} />
+                <AiOutlineMenu size={25} />
               </div>
             ) : (
               // Close Icon
               <div className='flex items-center justify-center'>
-                <AiOutlineCloseCircle size={30} />
+                <AiOutlineCloseCircle size={25} />
               </div>
             )}
           </button>
@@ -51,6 +52,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className='flex'>
+            {/* Show only on Desktop */}
             <ul className='hidden justify-between items-center gap-[10px] font-light lg:flex'>
               {navLinks.map((navLink) => (
                 <NavItem
@@ -80,7 +82,7 @@ const Navbar = () => {
 
       {/* Mobile Nav - drawer */}
       <nav
-        className={`dark:bg-custom-black animate__animated animate__fadeInLeft fixed z-10 h-full w-screen bg-custom-red ${
+        className={`dark:bg-custom-black animate__animated animate__fadeInLeft fixed z-10 h-full w-screen bg-custom-teal ${
           showSidebar ? "visible lg:hidden" : "hidden"
         }`}
       >

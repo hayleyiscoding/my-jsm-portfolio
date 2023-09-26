@@ -13,14 +13,12 @@ const SkillSection: React.FC<SkillSectionProps> = ({
   endIndex,
 }) => {
   return (
-    <div className='flex flex-col items-center justify-center p-2'>
+    <div className='skillSectionContainer'>
       {/* Header */}
-      <h4 className='text-white text-center text-xl font-medium dark:text-white'>
-        {type}
-      </h4>
+      <h4 className='skillSectionHeader'>{type}</h4>
 
       {/* Icons */}
-      <ul className='flex flex-wrap items-center justify-center gap-4 py-6'>
+      <ul className='skillSectionList'>
         {technologies.slice(startIndex, endIndex).map((item) => (
           <SkillsIcons
             key={item.id}

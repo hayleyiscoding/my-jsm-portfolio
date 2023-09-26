@@ -1,38 +1,57 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { projects } from "@/constants";
+import { getProjectDetails } from "@/sanity/lib/client";
+import { urlForImage } from "@/sanity/lib/image";
+import { PortableText } from "@portabletext/react";
 
-const ProjectDetailsMoreCases = () => {
+interface ProjectDetailsMoreCasesProps {
+  projectName: string;
+}
+
+const ProjectDetailsMoreCases: React.FC<ProjectDetailsMoreCasesProps> = async ({
+  projectName,
+}) => {
+  const projects = await getProjectDetails();
+
+  let filteredProjects = projects
+    ?.filter((project) => project.name !== projectName)
+    .slice(0, 2);
+
   return (
-    <section className='mt-16 max-w-4xl border-t-2 border-t-gray-400 px-6 pb-10 pt-20 dark:border-t-white'>
-      <div className='mb-8'>
-        <h5 className='text-gray-400 dark:text-custom-red mb-3'>Projects</h5>
+    <section id='moreCases' className='moreCasesContainer'>
+      {/* Header */}
+      <header className='mb-8'>
+        <h5 className='text-gray-400 dark:text-custom-teal mb-3'>Projects</h5>
         <h3 className='text-white text-3xl lg:text-4xl'>Other Case Studies</h3>
-      </div>
+      </header>
+
+      {/* Two Cards */}
       <div className='mb-6'>
-        <ul className='flex flex-col flex-wrap items-center justify-center gap-3 md:flex-row md:gap-8'>
-          {projects.slice(0, 2).map((project) => (
-            <li
-              key={project.id}
-              className='text-md dark:custom-neumorphic-process custom-neumorphic-teal flex-1 rounded-xl bg-white p-12 font-extralight mb-8'
-            >
+        <ul className='moreCasesList'>
+          {filteredProjects.map((project) => (
+            <li key={project._id} className='moreCasesListItem'>
+              {/* Image */}
               <Image
-                src={project.cardImage}
+                src={urlForImage(project.cardImage).width(500).url() || ""}
                 alt='Thumbnail of project'
                 className='mb-6 w-full rounded-md object-cover'
                 width={500}
                 height={500}
               />
-              <h5 className='text-white dark:text-custom-red mb-2 text-xl font-bold'>
-                {project.name}
-              </h5>
-              <p className='mb-2 line-clamp-3 w-full font-light leading-7 text-white'>
-                {project.about}
-              </p>
+
+              {/* Project Name */}
+              <h5 className='moreCasesProjectName'>{project.name}</h5>
+
+              {/* Project Description */}
+              <div className='moreCasesProjectText'>
+                <PortableText value={project.longDescription} />
+              </div>
+
+              {/* Button */}
               <Link
-                href='#'
-                className='dark:custom-neumorphic-process dark:hover:custom-neumorphic-black-pressed custom-neumorphic-teal hover:custom-neumorphic-teal-pressed my-5 block w-full cursor-pointer rounded-3xl py-3 text-center text-white dark:text-custom-red hover:opacity-70 font-semibold'
+                href={`/case-studies/${project?.slug.current}`}
+                className='moreCasesButton'
               >
                 See Case Study
               </Link>

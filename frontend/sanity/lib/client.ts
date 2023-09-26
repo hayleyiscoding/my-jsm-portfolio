@@ -6,7 +6,6 @@ import { Project } from "../types/Project";
 import { ProjectDetails } from "../types/ProjectDetails";
 
 export async function getProjects(): Promise<Project[]> {
-  console.log(apiVersion, dataset, projectId, useCdn);
   const client = createClient({
     apiVersion,
     dataset,
@@ -45,14 +44,15 @@ export async function getProjectDetails(): Promise<ProjectDetails[]> {
     headerImage,
     secondImage,
     figmaDesign,
+    cardImage,
     myRole,
     startDate,
     endDate,
     techStack,
     longDescription,
     problemStatement,
-    challenges,
     color,
+    challenges,
     learnings,
   }
 `);

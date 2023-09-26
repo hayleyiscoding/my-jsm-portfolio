@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -19,11 +17,7 @@ const NavItem: React.FC<NavItemProps> = ({ url, name }) => {
       <Link
         href={url}
         scroll={true}
-        className={`font-normal dark:highlights dark:decoration-custom-red dark:hover:no-underline hover:underline decoration-[2px] underline-offset-[4px] rounded-xl p-2 text-sm dark:text-white ${
-          isActivePath(url)
-            ? "decoration-white underline decoration-[2px] underline-offset-[4px]"
-            : ""
-        }`}
+        className={`navItemLink ${isActivePath(url) ? "navActive" : ""}`}
       >
         {name}
       </Link>

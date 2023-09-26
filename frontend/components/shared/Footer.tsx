@@ -4,7 +4,10 @@ import { socialLinks } from "@/constants";
 
 const Footer = () => {
   return (
-    <footer className='dark:bg-custom-black lg:mx-32 mt-5 rounded-xl px-7 py-5'>
+    <footer
+      id='footer'
+      className='container mx-auto dark:bg-custom-black lg:mx-32 mt-5 rounded-xl px-7 py-5'
+    >
       <div className='mx-auto'>
         <hr className='border-cream mt-5' />
 
@@ -25,7 +28,7 @@ const Footer = () => {
           </ul>
 
           <p className='footerText'>
-            <span className='text-white dark:text-custom-red leading-10 tracking-wider '>
+            <span className='text-white dark:text-custom-teal leading-10 tracking-wider '>
               Designed and developed with ❤️ by Hayley
             </span>
             <br />

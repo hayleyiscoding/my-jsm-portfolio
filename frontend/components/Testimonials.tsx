@@ -13,18 +13,14 @@ import {
 } from "swiper/modules";
 
 import { testimonialData } from "@/constants";
-import SectionHeader from "./SectionHeader";
-import TestimonialData from "./TestimonialData";
+import { SectionHeader, TestimonialData } from "../components/index";
 
 const Testimonials = () => {
   return (
-    <section
-      id='testimonials'
-      className='dark:bg-custom-black bg-custom-red mx-auto mb-20 py-5 pb-10 mt-12'
-    >
+    <section id='testimonials' className='sliderContainer'>
       {/* Header */}
       <header className='mb-5 mt-10 text-center '>
-        <SectionHeader phrase2='Testimonials' />
+        <SectionHeader phrase2='What' phrase3=' They Say!' />
       </header>
 
       {/* Slider */}

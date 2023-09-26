@@ -13,7 +13,7 @@ import {
   tailwind,
   git,
   github,
-  mui,
+  materialui,
   nextjs,
   express,
   figma,
@@ -67,12 +67,13 @@ export const heroInfo = {
 };
 
 export const techUrlMap = {
+  api,
   javascript,
   reactjs,
   tailwind,
   git,
   github,
-  mui,
+  materialui,
   nextjs,
   express,
   figma,
@@ -86,7 +87,6 @@ export const techUrlMap = {
   rainbowkit,
   ipfs,
   ethersjs,
-  api,
 };
 
 export const socialLinks = [
@@ -173,7 +173,7 @@ export const technologies = [
   {
     id: 9,
     name: "MUI",
-    icon: mui,
+    icon: materialui,
   },
   {
     id: 10,

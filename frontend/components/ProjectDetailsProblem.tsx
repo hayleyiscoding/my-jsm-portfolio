@@ -1,6 +1,7 @@
-import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
 import { Image as ImageType } from "sanity";
+
+import { urlForImage } from "@/sanity/lib/image";
 
 interface ProjectDetailsProblemProps {
   problemStatement: string;
@@ -12,18 +13,23 @@ const ProjectDetailsProblem: React.FC<ProjectDetailsProblemProps> = ({
   secondImage,
 }) => {
   return (
-    <section className='max-w-4xl py-6 dark:px-1 dark:bg-custom-black rounded-2xl'>
+    <section className='problemContainer'>
       <div className='mx-auto ml-3'>
-        <h5 className='text-gray-400 dark:text-custom-red mb-2'>Problem</h5>
+        {/* Header */}
+        <h5 className='text-gray-400 dark:text-custom-teal mb-2'>Problem</h5>
         <h3 className='text-white text-3xl lg:text-4xl'>Problem Statement</h3>
-        <p className='py-8 font-extralight max-w-4xl text-opacity-80 text-white'>
+
+        {/* Statement */}
+        <p className='py-8 font-extralight max-w-4xl text-white'>
           {problemStatement}
         </p>
+
+        {/* Image */}
         <Image
-          src={urlForImage(secondImage).width(8000).url()}
+          src={urlForImage(secondImage).width(1000).url()}
           alt='Image related to project'
-          className='rounded-md'
-          width={8000}
+          className='rounded-md grayscale'
+          width={1000}
           height={800}
         />
       </div>

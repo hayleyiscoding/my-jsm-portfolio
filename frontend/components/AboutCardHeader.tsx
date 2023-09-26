@@ -1,25 +1,28 @@
 import { AiFillCheckCircle, AiOutlineDown } from "react-icons/ai";
 
-interface AboutCardProps {
+interface AboutCardHeaderProps {
   summary: string;
   children: React.ReactNode;
 }
 
-const AboutCard: React.FC<AboutCardProps> = ({ summary, children }) => {
+const AboutCardHeader: React.FC<AboutCardHeaderProps> = ({
+  summary,
+  children,
+}) => {
   return (
-    <section id='AboutCard' className='rounded-2xl'>
+    <section id='AboutCardHeader' className='rounded-2xl'>
       <details
         open
-        className='custom-neumorphic-teal-pressed bg-custom-red rounded-2xl pb-1'
+        className='custom-neumorphic-teal-pressed bg-custom-teal rounded-2xl pb-1'
       >
         <summary className='summary'>
-          <span className='text-custom-red'>
+          <span className='text-custom-teal'>
             <AiFillCheckCircle size={40} />
           </span>
           <h4 className='text-custom-black text-lg font-light dark:text-white'>
             {summary}
           </h4>
-          <span className='text-custom-black animate-bounce-slow p-2'>
+          <span className='text-custom-black dark:text-custom-teal animate-bounce-slow p-2'>
             <AiOutlineDown size={20} />
           </span>
         </summary>
@@ -29,4 +32,4 @@ const AboutCard: React.FC<AboutCardProps> = ({ summary, children }) => {
   );
 };
 
-export default AboutCard;
+export default AboutCardHeader;

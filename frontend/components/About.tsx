@@ -1,21 +1,22 @@
 import { AiFillLinkedin } from "react-icons/ai";
 
 import { strengths } from "@/constants";
-import SectionHeader from "./SectionHeader";
-import AboutCard from "./AboutCard";
+import { SectionHeader, AboutCardHeader } from "../components/index";
 
 const About = () => {
   return (
-    <section id='about' className='mt-10 w-full rounded-2xl py-7 px-6 lg:px-24'>
+    <section id='about' className='aboutContainer'>
+      {/* Header */}
       <div className='mb-12 pt-9 text-center'>
         <SectionHeader phrase1={`About `} phrase2='Me' />
       </div>
-
-      <div className='grid grid-cols-1 gap-6 px-4 sm:grid-cols-3 sm:px-0 xl:grid-cols-5'>
+      {/* Cards */}
+      <div className='aboutGrid'>
         {strengths.map((strength) => (
-          <div className='min-h-[150px] lg:h-[470px]' key={strength.id}>
-            <AboutCard summary={strength.title}>
+          <AboutCardHeader summary={strength.title} key={strength.id}>
+            <div className='min-h-[150px] lg:h-[270px]'>
               <div className='my-5 -mt-2 rounded-b-xl p-1'>
+                {/* Quote */}
                 <p className='mb-4 text-sm font-light text-white opacity-90'>
                   {strength.quote}
                 </p>
@@ -33,8 +34,8 @@ const About = () => {
                   </div>
                 </div>
               </div>
-            </AboutCard>
-          </div>
+            </div>
+          </AboutCardHeader>
         ))}
       </div>
     </section>

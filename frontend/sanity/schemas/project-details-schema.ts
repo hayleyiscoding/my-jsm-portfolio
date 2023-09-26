@@ -91,7 +91,7 @@ const projectDetails = {
       name: "longDescription",
       title: "Long Description",
       type: "array",
-      of: [{ type: "block" }],
+      of: [{ type: "block", styles: [{ title: "Normal", value: "normal" }] }],
     },
     {
       name: "problemStatement",

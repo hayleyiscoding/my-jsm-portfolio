@@ -4,7 +4,7 @@ import reactjs from "../assets/tech/reactjs.png";
 import tailwind from "../assets/tech/tailwind.png";
 import git from "../assets/tech/git.png";
 import github from "../assets/tech/github.png";
-import mui from "../assets/tech/materialui.png";
+import materialui from "../assets/tech/materialui.png";
 import nextjs from "../assets/tech/nextjs.png";
 import express from "../assets/tech/express.png";
 import figma from "../assets/tech/figma.png";
@@ -49,7 +49,7 @@ export {
   tailwind,
   git,
   github,
-  mui,
+  materialui,
   nextjs,
   express,
   figma,

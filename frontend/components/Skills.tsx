@@ -1,6 +1,4 @@
-import SectionHeader from "./SectionHeader";
-import SkillSection from "./SkillSection";
-import SkillsOther from "./SkillsOther";
+import { SectionHeader, SkillSection, SkillsOther } from "../components/index";
 
 const Skills = () => {
   return (
@@ -27,6 +25,7 @@ const Skills = () => {
             startIndex={28}
             endIndex={34}
           />
+
           {/* Other Skills */}
           <SkillsOther type='Other Skills' startIndex={21} endIndex={28} />
         </div>
