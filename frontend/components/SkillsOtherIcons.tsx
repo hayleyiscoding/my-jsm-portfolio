@@ -2,8 +2,8 @@ import Image, { StaticImageData } from "next/image";
 
 interface SkillsOtherIconsProps {
   name: string;
-  icon: string | StaticImageData;
   id: number;
+  icon: string | StaticImageData;
 }
 
 const SkillsOtherIcons: React.FC<SkillsOtherIconsProps> = ({
