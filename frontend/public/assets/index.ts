@@ -40,6 +40,8 @@ import process2 from "../assets/process/process2.svg";
 import process3 from "../assets/process/process3.svg";
 import process4 from "../assets/process/process4.svg";
 import process5 from "../assets/process/process5.svg";
+// Spinner
+import spinner from "./spinner.svg";
 
 export {
   api,
@@ -81,4 +83,5 @@ export {
   process3,
   process4,
   process5,
+  spinner,
 };

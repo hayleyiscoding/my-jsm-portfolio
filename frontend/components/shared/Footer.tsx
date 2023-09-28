@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer
       id='footer'
-      className='container mx-auto dark:bg-custom-black lg:mx-32 mt-5 rounded-xl px-7 py-5'
+      className='dark:bg-custom-black container mx-auto mt-5 rounded-xl px-7 py-5'
     >
       <div className='mx-auto'>
         <hr className='border-cream mt-5' />
@@ -28,7 +28,7 @@ const Footer = () => {
           </ul>
 
           <p className='footerText'>
-            <span className='text-white dark:text-custom-teal leading-10 tracking-wider '>
+            <span className='dark:text-custom-teal leading-10 tracking-wider text-white '>
               Designed and developed with ❤️ by Hayley
             </span>
             <br />

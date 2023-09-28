@@ -29,19 +29,6 @@
     text-decoration-skip-ink: all;
   }
 
-  /* Custom Input Box */
-  input {
-    @apply text-[white] text-base font-thin tracking-[0.009375em] self-end box-border w-full transition-opacity ease-in-out dark:bg-custom-black bg-white h-16 mt-6 pt-[35px] pb-10 px-4 rounded-[4px_4px_0_0] border-b-[3px] border-b-[#008e97] border-[none] border-solid shadow-xl;
-  }
-
-  input:focus {
-    @apply border border-solid border-[#008e97];
-  }
-
-  input::placeholder {
-    @apply font-extralight text-base pt-4;
-  }
-
   /* Custom SuperScript */
   .custom-superscript {
     @apply text-[0.4em] leading-[0.3em] align-baseline relative top-[-1em];
@@ -369,7 +356,7 @@
   }
 
   .testimonialQuoteContainer {
-    @apply custom-neumorphic-teal-pressed mt-3 rounded-md px-4 py-6 opacity-80 sm:mt-8 md:px-10;
+    @apply custom-neumorphic-teal-pressed mt-3 rounded-md px-4 py-6 opacity-80 sm:mt-8 md:px-10 text-white;
   }
 
   .testomonialQuote {
@@ -422,27 +409,27 @@
   /* Contact Form */
 
   .contactSubheader {
-    @apply md:text-base text-white mx-auto max-w-xl px-5 text-center text-sm font-light leading-6 text-opacity-70 dark:text-white lg:-mt-6;
+    @apply md:text-base text-white mx-auto max-w-xl px-5 text-center text-sm font-light leading-6 text-opacity-70 dark:text-white lg:-mt-20;
   }
 
   .emailInput {
-    @apply border-b-custom-teal block w-full rounded-md border-b bg-custom-teal p-4 text-white caret-white transition-all duration-200 placeholder:text-white dark:focus:border-custom-teal focus:border-white focus:outline-none dark:bg-black custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed mb-6;
+    @apply bg-custom-teal dark:focus:border-custom-teal custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed mb-6 dark:text-custom-teal block w-full rounded-md p-4 text-white caret-white transition-all duration-200 placeholder:text-sm placeholder:text-white focus:border-white focus:outline-none dark:bg-black !important;
   }
 
   .nameInput {
-    @apply border-b-custom-teal mb-6 block w-full rounded-md border-b bg-custom-teal p-4 text-white caret-white transition-all duration-200 placeholder:text-white dark:focus:border-custom-teal  focus:border-white focus:outline-none dark:bg-black md:mb-0 custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed;
+    @apply bg-custom-teal dark:focus:border-custom-teal custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed dark:text-custom-teal mb-6 block w-full rounded-md p-4 caret-white transition-all duration-200 placeholder:text-sm placeholder:text-white focus:border-white focus:outline-none dark:bg-black md:mb-0 !important;
   }
 
-  .contactFormGrid {
-    @apply grid grid-cols-1 gap-x-4 gap-y-1 sm:grid-cols-2;
+  .contactFormSection {
+    @apply relative flex flex-col items-center justify-center p-2 lg:px-10 lg:py-2 dark:bg-custom-black !important;
   }
 
   .submitButton {
-    @apply text-base dark:bg-custom-teal bg-custom-teal absolute mt-8 inline-flex cursor-pointer items-center justify-center rounded-md custom-neumorphic-teal dark:custom-neumorphic-process hover:dark:custom-neumorphic-black-pressed px-10 py-3 font-light leading-5 text-white dark:text-custom-teal shadow-xl transition-all duration-200 hover:text-white hover:custom-neumorphic-teal-pressed focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2;
+    @apply text-base dark:bg-custom-teal bg-custom-teal absolute inline-flex cursor-pointer items-center justify-center rounded-md custom-neumorphic-teal dark:custom-neumorphic-process hover:dark:custom-neumorphic-black-pressed px-10 py-3 leading-5 text-white dark:text-custom-teal transition-all duration-200 hover:text-white hover:custom-neumorphic-teal-pressed focus:outline-none focus:ring-2 focus:ring-custom-teal focus:ring-offset-2 font-semibold !important;
   }
 
   .contactTextArea {
-    @apply border-b-custom-teal mt-[20px] block w-full resize-y rounded-md border-b p-4 font-light text-white caret-white transition-all duration-200 placeholder:text-white dark:focus:border-custom-teal focus:outline-none dark:bg-black bg-custom-teal custom-neumorphic-teal-pressed dark:custom-neumorphic-black-pressed focus:border-white;
+    @apply dark:text-custom-teal bg-custom-teal dark:bg-custom-black pt-4 font-light placeholder:text-sm text-white dark:custom-neumorphic-black-pressed custom-neumorphic-teal-pressed !important;
   }
 
   /* Footer */

@@ -4,7 +4,7 @@ import BackToTopButton from "../components/BackToTopButton";
 import CopyButton from "../components/CopyButton";
 import Hero from "../components/Hero";
 import HeroImage from "../components/HeroImage";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "./ContactForm";
 import ModeToggle from "../components/ModeToggle";
 import NavItem from "../components/NavItem";
 import NavItemMobile from "../components/NavItemMobile";
@@ -27,6 +27,7 @@ import ProjectDetailsProblem from "../components/ProjectDetailsProblem";
 import ProjectDetailsProcess from "../components/ProjectDetailsProcess";
 import ProjectDetailsLearnings from "../components/ProjectDetailsLearnings";
 import ProjectDetailsMoreCases from "../components/ProjectDetailsMoreCases";
+import ButtonWithSpinner from "../components/ButtonWithSpinner";
 
 export {
   About,
@@ -58,4 +59,5 @@ export {
   ProjectDetailsProcess,
   ProjectDetailsLearnings,
   ProjectDetailsMoreCases,
+  ButtonWithSpinner,
 };

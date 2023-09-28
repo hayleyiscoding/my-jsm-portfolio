@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <>
       {/* Main nav */}
-      <nav className='container mx-auto lg:px-1'>
+      <nav className='container mx-auto lg:px-8'>
         <div className='navDesktop'>
           {/* Show only on mobile */}
           <button
@@ -45,7 +45,7 @@ const Navbar = () => {
           <div className='flex-1'>
             <Link
               href='/'
-              className='flex py-2 lg:mr-24 justify-start md:justify-end lg:justify-start'
+              className='flex justify-start py-2 md:justify-end lg:mr-24 lg:justify-start'
             >
               <div className='logo'>H</div>
               <span className='logoName'>Hayley | React Developer</span>
@@ -53,7 +53,7 @@ const Navbar = () => {
           </div>
           <div className='flex'>
             {/* Show only on Desktop */}
-            <ul className='hidden justify-between items-center gap-[10px] font-light lg:flex'>
+            <ul className='hidden items-center justify-between gap-[10px] font-light lg:flex'>
               {navLinks.map((navLink) => (
                 <NavItem
                   key={navLink.id}
@@ -73,7 +73,7 @@ const Navbar = () => {
               </li>
             </ul>
             {/* Dark Mode Toggle */}
-            <div className='md:ml-4 mt-[2px]'>
+            <div className='mt-[2px] md:ml-4'>
               <ModeToggle />
             </div>
           </div>
@@ -82,7 +82,7 @@ const Navbar = () => {
 
       {/* Mobile Nav - drawer */}
       <nav
-        className={`dark:bg-custom-black animate__animated animate__fadeInLeft fixed z-10 h-full w-screen bg-custom-teal ${
+        className={`dark:bg-custom-black animate__animated animate__fadeInLeft bg-custom-teal fixed z-10 h-full w-screen ${
           showSidebar ? "visible lg:hidden" : "hidden"
         }`}
       >
